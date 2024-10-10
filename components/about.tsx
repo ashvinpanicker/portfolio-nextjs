@@ -19,6 +19,31 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
+        I've been passionate about tech since childhood, starting from hacking
+        TV cables to tinkering with Arduinos and flashing custom ROMs. After
+        earning my Computer Science degree, I began my career at a data
+        analytics startup, where I discovered a love for frontend development
+        and creatively visualizing data. I migrated the company’s legacy tool to
+        a responsive PWA using ReactJS and d3JS.
+      </p>
+      <p className="mb-3">
+        In 2018, I co-founded a Bitcoin startup, initially building a hardware
+        wallet and later pivoting to a cross-platform mobile app using React
+        Native and NodeJS. After successfully launching a Bitcoin
+        Lightning-powered debit card in Europe, I transitioned to SuperProcure
+        as a Senior Software Engineer, where I led the creation of custom
+        analytics dashboards and managed a small team, while driving tech
+        upgrades and streamlining processes.
+      </p>
+      <p className="mb-3">
+        In 2023, I ventured into e-commerce, freelanced on projects like
+        aquaoutback.com, and developed an AI chatbot for customer engagement.
+        Currently, I'm a Software Consultant at Tailgrab Digital, focusing on
+        React, Node.js, and MySQL. I'm passionate about emerging technologies in
+        Fintech, AI, and AR/VR, and always eager to learn and innovate.
+      </p>
+
+      {/* <p className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
         passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -43,7 +68,7 @@ export default function About() {
         learning about{" "}
         <span className="font-medium">history and philosophy</span>. I'm also
         learning how to play the guitar.
-      </p>
+      </p> */}
     </motion.section>
   );
 }

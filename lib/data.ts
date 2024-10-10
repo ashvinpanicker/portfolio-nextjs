@@ -1,8 +1,14 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
+import {
+  FaReact,
+  FaGuitar,
+  FaRocket,
+  FaChartBar,
+  FaPiggyBank,
+} from "react-icons/fa";
+import gritHappensImg from "@/public/Grit_Happens_Logo.jpg";
+import aquaOutbackImg from "@/public/aqua_wallpaper.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
@@ -35,58 +41,94 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Senior Technology Analyst",
+    location: "Oaknorth Bank",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "I worked at the Bangalore office of this UK based bank for a couple of months where I created form components and implemented them across their application",
+    icon: React.createElement(FaPiggyBank),
+    date: "2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Software Consultant",
+    location: "Tailgrab Digital",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Curious to start my own dropshipping business after a fad trend picked up during COVID, I started Tailgrab and sold products on Amazon. I would meticulously pick products, price them appropriately and advertise them to boost sales. I continued to work in software and helped my friends with the online presence of their botique resort business. I also worked for an AI startup and built their entire front end chatbot and dashboard interface by myself",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2023 - 2024",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Senior Software Engineer",
+    location: "SuperProcure",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "At Superprocure I helped the team present their data in meaningful and pretty dashboards which were appreciated by the clients. I also helped improving the core SaaS product by building robust frontend components that were used across the app. As a senior engineer, I also helped hire and grow the team to double the size it was when I first joined.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2020 - 2022",
+  },
+  {
+    title: "Co-Founder",
+    location: "Lastbit (now Striga)",
+    description:
+      "Took a plunge into enterpreneurship with my college friend, started a company from our homes, raised $$ abroad, attended 3 different accelerators, pivoted several times and finally found product-market fit",
+    icon: React.createElement(FaRocket),
+    date: "2018 - 2020",
+  },
+  {
+    title: "Software Engineer",
+    location: "Dsquare Solutions (now Hansa Cequity)",
+    description:
+      "Rebuilt the company's flagship data analytics tool from Sencha UI into a responsive Progressive Web Application (PWA), first with jQuery, HTML, and CSS, then later with ReactJS as it gained mainstream adoption, improving performance, accessibility, and user experience across devices.",
+    icon: React.createElement(FaChartBar),
+    date: "2016 - 2018",
+  },
+  {
+    title: "Guitar Teacher (part time)",
+    location: "Furtados School of Music",
+    description:
+      "Helping beginners learn level 1 guitar while having fun with it by incorporating their favorite songs.",
+    icon: React.createElement(FaGuitar),
+    date: "2017 - 2018",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Grit Happens",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Gamification of health statistics. Promoting healthy competition with leaderboards for health statistics",
+    tags: ["React-Native", "NodeJS", "PostgreSQL"],
+    imageUrl: gritHappensImg,
   },
   {
-    title: "rmtDev",
+    title: "Aquaoutback",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Handled the website for a botique resort and watersports academy in Tamil Nadu",
+    tags: ["Wordpress", "SEO", "Page speed optimization"],
+    imageUrl: aquaOutbackImg,
+  },
+  {
+    title: "MIRA - Smart Mirror",
+    description: "Built a smart mirror to experiment with home automation",
+    tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "Bitcoin Merchant App",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Allowing merchants to accept bitcoin over the lightning network with a simple Cashier UI",
+    tags: ["React-Native", "bitcoind", "C-Lightning", "RPC", "Shell scripting"],
     imageUrl: wordanalyticsImg,
+  },
+  {
+    title: "Intentional Living",
+    description: "A community to help people reduce their screen time",
+    tags: ["Discord community management", "Productivity", "Mindfulness"],
+    imageUrl: rmtdevImg,
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "HTML5",
+  "CSS3",
   "JavaScript",
   "TypeScript",
   "React",
@@ -94,14 +136,22 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
+  "MySQL",
   "MongoDB",
   "Redux",
-  "GraphQL",
-  "Apollo",
+  "Material-UI",
+  "D3.js",
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
-  "Framer Motion",
+  "React-Native",
+  "Terraform",
+  "Opensearch",
+  "Metabase",
+  "Jquery",
+  "Wordpress",
+  "Figma",
+  "UI/UX Design",
+  "Storytelling",
+  "Bitcoin",
 ] as const;
