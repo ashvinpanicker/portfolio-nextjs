@@ -3,16 +3,12 @@ import { CgWorkAlt } from "react-icons/cg";
 import {
   FaReact,
   FaGuitar,
-  FaRocket,
+  // FaRocket,
   FaBitcoin,
   FaPeopleArrows,
   FaChartBar,
   FaPiggyBank,
 } from "react-icons/fa";
-import gritHappensImg from "@/public/Grit_Happens_Logo.jpg";
-import aquaOutbackImg from "@/public/aqua_wallpaper.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -106,33 +102,33 @@ export const projectsData = [
     description:
       "Gamification of health statistics. Promoting healthy competition with leaderboards for health statistics",
     tags: ["React-Native", "NodeJS", "PostgreSQL"],
-    imageUrl: gritHappensImg,
+    imageUrl: "/Grit_Happens_Logo.jpg",
   },
   {
     title: "Aquaoutback",
     description:
       "Handled the website for a botique resort and watersports academy in Tamil Nadu",
     tags: ["Wordpress", "SEO", "Page speed optimization"],
-    imageUrl: aquaOutbackImg,
+    imageUrl: "/aqua_wallpaper.png",
   },
   {
     title: "MIRA - Smart Mirror",
     description: "Built a smart mirror to experiment with home automation",
     tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
-    imageUrl: rmtdevImg,
+    imageUrl: "/rmtdev.png",
   },
   {
     title: "Bitcoin Merchant App",
     description:
       "Allowing merchants to accept bitcoin over the lightning network with a simple Cashier UI",
     tags: ["React-Native", "bitcoind", "C-Lightning", "RPC", "Shell scripting"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: "/wordanalytics.png",
   },
   {
     title: "Intentional Living",
     description: "A community to help people reduce their screen time",
     tags: ["Discord community management", "Productivity", "Mindfulness"],
-    imageUrl: rmtdevImg,
+    imageUrl: "/rmtdev.png",
   },
 ] as const;
 
