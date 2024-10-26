@@ -115,20 +115,20 @@ export const projectsData = [
     title: "MIRA - Smart Mirror",
     description: "Built a smart mirror to experiment with home automation",
     tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
-    imageUrl: "/rmtdev.png",
+    imageUrl: "/MIRA.jpeg",
   },
   {
     title: "Bitcoin Merchant App",
     description:
       "Allowing merchants to accept bitcoin over the lightning network with a simple Cashier UI",
     tags: ["React-Native", "bitcoind", "C-Lightning", "RPC", "Shell scripting"],
-    imageUrl: "/wordanalytics.png",
+    imageUrl: "/BTC_Merchant_app.png",
   },
   {
     title: "Intentional Living",
     description: "A community to help people reduce their screen time",
     tags: ["Discord community management", "Productivity", "Mindfulness"],
-    imageUrl: "/rmtdev.png",
+    imageUrl: "/Intentional_Living.png",
   },
 ] as const;
 
