@@ -143,6 +143,7 @@ export const skillsData = [
   "React.js",
   "Next.js",
   "Redux / Redux-Saga",
+  "Zustand",
 
   // Styling & Component Libraries
   "Tailwind CSS",
@@ -159,30 +160,34 @@ export const skillsData = [
   // Mobile Development
   "React-Native",
 
+  // Backend & Database
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "PostgreSQL",
+
   // UI/UX & Design Tools
   "Figma",
   "Adobe XD",
   "UI/UX Design",
 
-  // Testing
-  "Jest",
-
-  // CI/CD & Automation
-  "GitHub Actions",
-
-  // Build Tools
+  // Build & Package Tools
   "Webpack",
   "Vite",
+  "npm",
+  "Yarn",
+
+  // Testing & Automation
+  "Jest",
+  "GitHub Actions",
+
+  // Process & Server Management
+  "PM2",
+  "Nginx",
 
   // Collaboration & Version Control
   "Google Sheets",
   "Git",
-
-  // Backend & Database (for full-stack flexibility)
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
 
   // Data & Cloud Tools
   "Metabase",
