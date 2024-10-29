@@ -133,33 +133,65 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  // Core Frontend Skills
   "HTML5",
   "CSS3",
   "JavaScript",
   "TypeScript",
+
+  // Frameworks & Libraries
   "React.js",
   "Next.js",
   "Redux / Redux-Saga",
+
+  // Styling & Component Libraries
   "Tailwind CSS",
   "Material-UI",
   "Bootstrap",
   "ant-design",
   "Storybook",
+
+  // Data Visualization
   "D3.js",
   "victory-charts",
   "ant-charts",
+
+  // Mobile Development
   "React-Native",
+
+  // UI/UX & Design Tools
   "Figma",
   "Adobe XD",
   "UI/UX Design",
+
+  // Testing
+  "Jest",
+
+  // CI/CD & Automation
+  "GitHub Actions",
+
+  // Build Tools
+  "Webpack",
+  "Vite",
+
+  // Collaboration & Version Control
   "Google Sheets",
   "Git",
+
+  // Backend & Database (for full-stack flexibility)
   "Node.js",
   "Express",
   "MongoDB",
   "PostgreSQL",
+
+  // Data & Cloud Tools
   "Metabase",
+  "Docker",
   "Terraform",
+  "AWS",
+  "GCP",
+
+  // Additional Skills (for versatility)
   "Jquery",
   "Wordpress",
   "GIMP",
