@@ -65,7 +65,7 @@ export default function Intro() {
         <span className="font-bold">Senior Software Engineer</span> with{" "}
         <span className="font-bold">8 years</span> of experience. I write
         software
-        <span className="italic">to boost revenue</span> for small businesses.
+        <span className="italic"> to boost revenue</span> for small businesses.
         My focus is <span className="underline">React</span>.
       </motion.h1>
 

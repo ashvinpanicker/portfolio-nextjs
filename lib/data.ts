@@ -97,12 +97,21 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  // {
+  //   title: "Grit Happens",
+  //   description:
+  //     "Gamification of health statistics. Promoting healthy competition with leaderboards for health statistics",
+  //   tags: ["React-Native", "NodeJS", "PostgreSQL"],
+  //   imageUrl: "/Grit_Happens_Logo.jpg",
+  //   externalLink: "#",
+  // },
   {
-    title: "Grit Happens",
+    title: "Sell247",
     description:
-      "Gamification of health statistics. Promoting healthy competition with leaderboards for health statistics",
-    tags: ["React-Native", "NodeJS", "PostgreSQL"],
-    imageUrl: "/Grit_Happens_Logo.jpg",
+      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
+    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
+    imageUrl: "/Chatbot-ss.png",
+    externalLink: "https://demo.sell247.ai/arihantp/",
   },
   {
     title: "Aquaoutback",
@@ -110,12 +119,30 @@ export const projectsData = [
       "Handled the website for a botique resort and watersports academy in Tamil Nadu",
     tags: ["Wordpress", "SEO", "Page speed optimization"],
     imageUrl: "/aqua_wallpaper.png",
+    externalLink: "https://aquaoutback.com",
   },
   {
     title: "MIRA - Smart Mirror",
     description: "Built a smart mirror to experiment with home automation",
     tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
     imageUrl: "/MIRA.jpeg",
+    externalLink: "https://magicmirror.builders/",
+  },
+  // {
+  //   title: "cln-pay",
+  //   description:
+  //     "A simple web UI connected to a bitcoin lightning node via API allowing for",
+  //   tags: ["bitcoind", "C-Lightning", "RPC", "EJS"],
+  //   imageUrl: "/BTC_Merchant_app.png",
+  //   externalLink: "https://twitter.com",
+  // },
+  {
+    title: "lastbit website",
+    description:
+      "One of the versions of many of the websites I came up with during my time as a startup founder",
+    tags: ["ReactJS", "Gatsby", "CSS"],
+    imageUrl: "/bitcoin-zeus.gif",
+    externalLink: "https://lastbit-website-static.onrender.com",
   },
   {
     title: "Bitcoin Merchant App",
@@ -123,12 +150,22 @@ export const projectsData = [
       "Allowing merchants to accept bitcoin over the lightning network with a simple Cashier UI",
     tags: ["React-Native", "bitcoind", "C-Lightning", "RPC", "Shell scripting"],
     imageUrl: "/BTC_Merchant_app.png",
+    externalLink: "#",
   },
+  // {
+  //   title: "Intentional Living",
+  //   description: "A community to help people reduce their screen time",
+  //   tags: ["Discord community management", "Productivity", "Mindfulness"],
+  //   imageUrl: "/Intentional_Living.png",
+  //   externalLink: "https://twitter.com",
+  // },
   {
-    title: "Intentional Living",
-    description: "A community to help people reduce their screen time",
-    tags: ["Discord community management", "Productivity", "Mindfulness"],
-    imageUrl: "/Intentional_Living.png",
+    title: "SPECT Heart Analysis",
+    description:
+      "Analysed datasets using machine learning models to predict if a person has a healthy heart or not",
+    tags: ["AI/ML", "Orange3", "Python", "scikit-learn"],
+    imageUrl: "/heartRiskAnalysis.png",
+    externalLink: "/College-Paper.pdf",
   },
 ] as const;
 
