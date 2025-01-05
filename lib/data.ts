@@ -106,6 +106,30 @@ export const projectsData = [
   //   externalLink: "#",
   // },
   {
+    title: "WTSC Golf Website",
+    description:
+      "Helped a client manage their webflow website using fundamental design principles to make it more presentable and mobile friendly.",
+    tags: ["Webflow"],
+    imageUrl: "/wtsc.png",
+    externalLink: "https://www.worldteamsgolf.com/",
+  },
+  {
+    title: "Sell247",
+    description:
+      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
+    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
+    imageUrl: "/Chatbot-ss.png",
+    externalLink: "https://demo.sell247.ai/arihantp/",
+  },
+  {
+    title: "Sell247",
+    description:
+      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
+    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
+    imageUrl: "/Chatbot-ss.png",
+    externalLink: "https://demo.sell247.ai/arihantp/",
+  },
+  {
     title: "Sell247",
     description:
       "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
