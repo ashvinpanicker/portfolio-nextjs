@@ -8,6 +8,7 @@ import {
   FaPeopleArrows,
   FaChartBar,
   FaPiggyBank,
+  FaUsers,
 } from "react-icons/fa";
 
 export const links = [
@@ -39,18 +40,26 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Freelance Application Developer",
+    location: "Remote",
+    description:
+      "Worked with clients to build web applications. I have also helped clients with their existing projects by fixing bugs, adding new features, and improving performance. Looking for help with your online presence? Let's talk!",
+    icon: React.createElement(FaUsers),
+    date: "2023 - Present",
+  },
+  {
     title: "Senior Technology Analyst",
     location: "Oaknorth Bank",
     description:
-      "I worked at the Bangalore office of this UK based bank for a couple of months where I created form components and implemented them across their application",
+      "I worked at the Bangalore office of this UK based bank for a couple of months where I created several form components and implemented them across their application which was an internal tool used by their Debt Finance Directors",
     icon: React.createElement(FaPiggyBank),
     date: "2024",
   },
   {
-    title: "Software Consultant",
+    title: "Founder",
     location: "Tailgrab Digital",
     description:
-      "Curious to start my own dropshipping business after a fad trend picked up during COVID, I started Tailgrab and sold products on Amazon. I would meticulously pick products, price them appropriately and advertise them to boost sales. I continued to work in software and helped my friends with the online presence of their botique resort business. I also worked for an AI startup and built their entire front end chatbot and dashboard interface by myself",
+      "Curious to start my own dropshipping business, I started Tailgrab and sold products on Amazon. I would meticulously pick products, price them appropriately and advertise them to boost sales. Sold out all my products and eventually realized this was not my calling.",
     icon: React.createElement(CgWorkAlt),
     date: "2023 - 2024",
   },
@@ -72,7 +81,7 @@ export const experiencesData = [
   },
   {
     title: "Community Manager (part time)",
-    location: "Mushu media Spatium",
+    location: "Spatium.net",
     description:
       "Kept a crypto community active and engaged on Telegram by sharing daily insights on the company’s product offerings and answering questions related to the underlying blockchain technology.",
     icon: React.createElement(FaPeopleArrows),
@@ -97,14 +106,6 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-  // {
-  //   title: "Grit Happens",
-  //   description:
-  //     "Gamification of health statistics. Promoting healthy competition with leaderboards for health statistics",
-  //   tags: ["React-Native", "NodeJS", "PostgreSQL"],
-  //   imageUrl: "/Grit_Happens_Logo.jpg",
-  //   externalLink: "#",
-  // },
   {
     title: "WTSC Golf Website",
     description:
@@ -116,23 +117,7 @@ export const projectsData = [
   {
     title: "Sell247",
     description:
-      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
-    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
-    imageUrl: "/Chatbot-ss.png",
-    externalLink: "https://demo.sell247.ai/arihantp/",
-  },
-  {
-    title: "Sell247",
-    description:
-      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
-    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
-    imageUrl: "/Chatbot-ss.png",
-    externalLink: "https://demo.sell247.ai/arihantp/",
-  },
-  {
-    title: "Sell247",
-    description:
-      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless deployment on client websites, ensuring a smooth experience across devices.",
+      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless responsive deployment on client websites",
     tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
     imageUrl: "/Chatbot-ss.png",
     externalLink: "https://demo.sell247.ai/arihantp/",
@@ -140,7 +125,7 @@ export const projectsData = [
   {
     title: "Aquaoutback",
     description:
-      "Handled the website for a botique resort and watersports academy in Tamil Nadu",
+      "Handled the website and online booking system for a botique resort and watersports academy in Tamil Nadu",
     tags: ["Wordpress", "SEO", "Page speed optimization"],
     imageUrl: "/aqua_wallpaper.png",
     externalLink: "https://aquaoutback.com",
@@ -260,6 +245,7 @@ export const skillsData = [
   // Additional Skills (for versatility)
   "Jquery",
   "Wordpress",
+  "Webflow",
   "GIMP",
   "ImageMagick",
   "Entrepreneurship",

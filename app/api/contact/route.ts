@@ -1,33 +1,44 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Force dynamic rendering to avoid StaticGenBailoutError
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
-  const body = await request.json();
-  const { senderEmail, message } = body;
-
   try {
-    // Send email via Resend API
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`, // Ensure your key is set in .env.local
-      },
-      body: JSON.stringify({
-        from: "Contact Form <onboarding@resend.dev>", // Your verified sender email
-        to: ["ashvin.panicker@gmail.com"], // Recipient email
-        subject: "Message from contact form",
-        html: `<p><strong>From:</strong> ${senderEmail}</p><p><strong>Message:</strong> ${message}</p>`,
-      }),
-    });
+    const body = await request.json(); // Parse the incoming JSON request
+    const { senderEmail, message } = body;
 
-    const data = await response.json();
-
-    if (!response.ok) {
-      return NextResponse.json({ error: data.message || "Failed to send email" }, { status: 500 });
+    if (!senderEmail || !message) {
+      return NextResponse.json(
+        { error: "Both senderEmail and message are required." },
+        { status: 400 }
+      );
     }
 
-    return NextResponse.json({ success: true, data });
-  } catch (error: Error | any) {
-    return NextResponse.json({ error: error.message || "An error occurred while sending email." }, { status: 500 });
+    // Sending email using Resend
+    const response = await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>", // Your verified sender
+      to: ["agnjkafgh@gmail.com"],
+      subject: "Message from Contact Form",
+      html: `<p><strong>From:</strong> ${senderEmail}</p><p><strong>Message:</strong> ${message}</p>`,
+    });
+
+    if (response.error) {
+      return NextResponse.json(
+        { error: response.error.message || "Failed to send email." },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true, data: response });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { error: "An error occurred while processing your request." },
+      { status: 500 }
+    );
   }
 }
