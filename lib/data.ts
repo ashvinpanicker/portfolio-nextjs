@@ -118,9 +118,16 @@ export const projectsData = [
     title: "WTSC Golf Website",
     description:
       "Helped a client manage their webflow website using fundamental design principles to make it more presentable and mobile friendly.",
-    tags: ["Webflow"],
+    tags: ["Webflow", "Responsive Web Design"],
     imageUrl: "/wtsc.png",
     externalLink: "https://www.worldteamsgolf.com/",
+  },
+  {
+    title: "MIRA - Smart Mirror",
+    description: "Built a smart mirror to experiment with home automation",
+    tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
+    imageUrl: "/MIRA.jpeg",
+    externalLink: "https://magicmirror.builders/",
   },
   {
     title: "Aquaoutback",
