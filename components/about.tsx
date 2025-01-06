@@ -21,54 +21,26 @@ export default function About() {
       <p className="mb-3">
         I've been passionate about tech since childhood, starting from hacking
         TV cables to tinkering with Arduinos and flashing custom ROMs. After
-        earning my Computer Science degree, I began my career at a data
+        earning my Computer Science degree in 2016, I began my career at a data
         analytics startup, where I discovered a love for frontend development
         and creatively visualizing data. I migrated the company’s legacy tool to
-        a responsive PWA using ReactJS and d3JS.
+        a responsive PWA using React and d3JS.
       </p>
       <p className="mb-3">
         In 2018, I co-founded a Bitcoin startup, initially building a hardware
         wallet and later pivoting to a cross-platform mobile app using React
-        Native and NodeJS. After successfully launching a Bitcoin
-        Lightning-powered debit card in Europe, I transitioned to SuperProcure
-        as a Senior Software Engineer, where I led the creation of custom
-        analytics dashboards and managed a small team, while driving tech
-        upgrades and streamlining processes.
+        Native and NodeJS. After being backed by top accelerators like YC and Berkeley Skydeck,
+        we successfully launching a Bitcoin Lightning-powered debit card in Europe.
+        Towards the end of 2020, I transitioned to SuperProcure as a Senior Software Engineer,
+        where I led the creation of custom analytics dashboards and managed a small team, 
+        while driving tech upgrades and streamlining processes.
       </p>
       <p className="mb-3">
-        In 2023, I ventured into e-commerce, freelanced on projects like
-        aquaoutback.com, and developed an AI chatbot for customer engagement.
-        Currently, I'm a Software Consultant at Tailgrab Digital, focusing on
-        React, Node.js, and MySQL. I'm passionate about emerging technologies in
-        Fintech, AI, and AR/VR, and always eager to learn and innovate.
+        In 2023, I ventured into e-commerce and freelance app development.
+        I'm a currently a Software Consultant, focusing on helping my clients
+        with their online presence. I'm passionate about emerging technologies and am always eager to learn and innovate.
+        When I'm not behind a screen, I like to travel, play the guitar and Kitesurf.
       </p>
-
-      {/* <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
-
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
-      </p> */}
     </motion.section>
   );
 }
