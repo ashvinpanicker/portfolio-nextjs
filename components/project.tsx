@@ -52,7 +52,7 @@ export default function Project({
           </ul>
         </div>
 
-        <a target="_blank" href={externalLink} rel="noopener noreferrer">
+        <a target="_blank" href={externalLink} rel="noopener noreferrer" aria-label={`View ${title}`}>
           <Image
             src={imageUrl}
             alt="Project I worked on"

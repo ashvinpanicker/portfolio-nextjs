@@ -105,6 +105,7 @@ export default function Intro() {
           href="https://linkedin.com/in/ashvin-panicker"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Go to Ashvin's LinkedIn"
         >
           <BsLinkedin />
         </a>
@@ -114,6 +115,7 @@ export default function Intro() {
           href="https://github.com/ashvinpanicker"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Go to Ashvin's GitHub"
         >
           <FaGithubSquare />
         </a>
