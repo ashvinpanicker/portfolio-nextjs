@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Ashvin Panicker | Portfolio",
-  description: "Ashvin is a full-stack developer with 8 years of experience.",
+  title: "Ashvin Panicker | Senior React Developer",
+  description: "Explore the portfolio of Ashvin Panicker, a Senior Software Engineer specializing in web development using React.js with over 8 years of experience.",
 };
 
 export default function RootLayout({

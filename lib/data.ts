@@ -38,78 +38,78 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+export const experiencesData =[
   {
-    title: "Freelance Application Developer",
-    location: "Remote",
-    description:
-      "Worked with clients to build web applications. I have also helped clients with their existing projects by fixing bugs, adding new features, and improving performance. Looking for help with your online presence? Let's talk!",
-    icon: React.createElement(FaUsers),
-    date: "2023 - Present",
+    "title": "Freelance Application Developer",
+    "location": "Remote",
+    "description":
+      "Collaborated with clients to build scalable and responsive web applications tailored to their needs. Enhanced existing projects by fixing bugs, implementing new features, and optimizing performance. I help businesses improve their online presence and user experience. Looking to elevate your digital solutions? Let's talk!",
+    "icon": React.createElement(FaUsers),
+    "date": "2023 - Present"
   },
   {
-    title: "Senior Technology Analyst",
-    location: "Oaknorth Bank",
-    description:
-      "I worked at the Bangalore office of this UK based bank for a couple of months where I created several form components and implemented them across their application which was an internal tool used by their Debt Finance Directors",
-    icon: React.createElement(FaPiggyBank),
-    date: "2024",
+    "title": "Senior Technology Analyst",
+    "location": "Oaknorth Bank",
+    "description":
+      "Contributed to the development of internal tools used by Debt Finance Directors at this UK-based bank. Designed and implemented reusable form components, enhancing the application's functionality and usability. This role exemplified my expertise in creating robust and maintainable frontend solutions.",
+    "icon": React.createElement(FaPiggyBank),
+    "date": "2024"
   },
   {
-    title: "Founder",
-    location: "Tailgrab Digital",
-    description:
-      "Curious to start my own dropshipping business, I started Tailgrab and sold products on Amazon. I would meticulously pick products, price them appropriately and advertise them to boost sales. Sold out all my products and eventually realized this was not my calling.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2023 - 2024",
+    "title": "Founder",
+    "location": "Tailgrab Digital",
+    "description":
+      "Founded an e-commerce business focused on dropshipping. Handpicked products, optimized pricing strategies, and executed targeted advertising campaigns to maximize sales. Successfully sold out all inventory and gained valuable entrepreneurial experience in digital marketing and online sales.",
+    "icon": React.createElement(CgWorkAlt),
+    "date": "2023 - 2024"
   },
   {
-    title: "Senior Software Engineer",
-    location: "SuperProcure",
-    description:
-      "At Superprocure I helped the team present their data in meaningful and pretty dashboards which were appreciated by the clients. I also helped improving the core SaaS product by building robust frontend components that were used across the app. As a senior engineer, I also helped hire and grow the team to double the size it was when I first joined.",
-    icon: React.createElement(FaReact),
-    date: "2020 - 2022",
+    "title": "Senior Software Engineer",
+    "location": "SuperProcure",
+    "description":
+      "Led the development of interactive analytics dashboards that provided clients with actionable insights. Enhanced the core SaaS product by creating robust, reusable frontend components. Played a key role in team growth by mentoring and hiring, doubling the engineering team size during my tenure.",
+    "icon": React.createElement(FaReact),
+    "date": "2020 - 2022"
   },
   {
-    title: "Co-Founder",
-    location: "Lastbit (now Striga)",
-    description:
-      "Took a plunge into enterpreneurship with my college friend, started a company from our homes, raised $$ abroad, attended 3 different accelerators, pivoted several times and finally found product-market fit",
-    icon: React.createElement(FaBitcoin),
-    date: "2018 - 2020",
+    "title": "Co-Founder",
+    "location": "Lastbit (now Striga)",
+    "description":
+      "Co-founded a fintech startup, navigating through fundraising rounds, product pivots, and market challenges. Participated in multiple accelerator programs, learning how to build a business, achieved product-market fit by launching innovative solutions, including a Bitcoin Lightning-powered debit card in Europe.",
+    "icon": React.createElement(FaBitcoin),
+    "date": "2018 - 2020"
   },
   {
-    title: "Community Manager (part time)",
-    location: "Spatium.net",
-    description:
-      "Kept a crypto community active and engaged on Telegram by sharing daily insights on the company’s product offerings and answering questions related to the underlying blockchain technology.",
-    icon: React.createElement(FaPeopleArrows),
-    date: "2018",
+    "title": "Community Manager (Part-Time)",
+    "location": "Spatium.net",
+    "description":
+      "Engaged a global crypto community on Telegram by sharing daily updates about the company’s blockchain products. Provided technical support and answered queries to foster trust and maintain high levels of engagement.",
+    "icon": React.createElement(FaPeopleArrows),
+    "date": "2018"
   },
   {
-    title: "Guitar Teacher (part time)",
-    location: "Furtados School of Music",
-    description:
-      "Taught beginners guitar lessons at home, following the music school's curriculum while making it enjoyable by incorporating their favorite songs into the curriculum.",
-    icon: React.createElement(FaGuitar),
-    date: "2017 - 2018",
+    "title": "Guitar Teacher (Part-Time)",
+    "location": "Furtados School of Music",
+    "description":
+      "Taught beginner guitar lessons, combining structured curriculum with personalized approaches to make learning enjoyable. Incorporated students' favorite songs into lessons to foster enthusiasm and skill-building.",
+    "icon": React.createElement(FaGuitar),
+    "date": "2017 - 2018"
   },
   {
-    title: "Software Engineer",
-    location: "Dsquare Solutions (now Hansa Cequity)",
-    description:
-      "Rebuilt the company's flagship data analytics tool from Sencha UI into a responsive Progressive Web Application (PWA), first with jQuery, HTML, and CSS, then later with ReactJS as it gained mainstream adoption, improving performance, accessibility, and user experience across devices.",
-    icon: React.createElement(FaChartBar),
-    date: "2016 - 2018",
-  },
+    "title": "Software Engineer",
+    "location": "Dsquare Solutions (now Hansa Cequity)",
+    "description":
+      "Redesigned the flagship data analytics tool as a responsive Progressive Web Application (PWA), improving accessibility and performance. Transitioned from Sencha UI to jQuery and later ReactJS, ensuring scalability and modern user experience across devices.",
+    "icon": React.createElement(FaChartBar),
+    "date": "2016 - 2018"
+  }
 ] as const;
 
 export const projectsData = [
   {
     title: "Sell247",
     description:
-      "Designed a responsive frontend for an AI chatbot to enhance user engagement. Managed script integration for seamless responsive deployment on client websites",
+      "Developed a responsive frontend for an AI-powered chatbot, boosting user engagement and optimizing integration for seamless deployment on client websites.",
     tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
     imageUrl: "/Chatbot-ss.png",
     externalLink: "https://demo.sell247.ai/arihantp/",
@@ -117,14 +117,14 @@ export const projectsData = [
   {
     title: "WTSC Golf Website",
     description:
-      "Helped a client manage their webflow website using fundamental design principles to make it more presentable and mobile friendly.",
+      "Revamped a client's Webflow website by applying responsive web design and fundamental design principles to improve presentation and mobile usability.",
     tags: ["Webflow", "Responsive Web Design"],
     imageUrl: "/wtsc.png",
     externalLink: "https://www.worldteamsgolf.com/",
   },
   {
     title: "MIRA - Smart Mirror",
-    description: "Built a smart mirror to experiment with home automation",
+    description: "Created a smart mirror prototype to explore home automation technologies, integrating hardware and software seamlessly.",
     tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
     imageUrl: "/MIRA.jpeg",
     externalLink: "https://magicmirror.builders/",
@@ -132,7 +132,7 @@ export const projectsData = [
   {
     title: "Aquaoutback",
     description:
-      "Handled the website and online booking system for a botique resort and watersports academy in Tamil Nadu",
+      "Managed the website and online booking system for a boutique resort and watersports academy in Tamil Nadu.",
     tags: ["Wordpress", "SEO", "Page speed optimization"],
     imageUrl: "/aqua_wallpaper.png",
     externalLink: "https://aquaoutback.com",
@@ -140,7 +140,7 @@ export const projectsData = [
   {
     title: "lastbit website",
     description:
-      "One of the versions of many of the websites I came up with during my time as a startup founder",
+      "Designed and developed multiple iterations of a startup website during my time as a co-founder, emphasizing scalability and performance.",
     tags: ["ReactJS", "Gatsby", "CSS"],
     imageUrl: "/bitcoin-zeus.gif",
     externalLink: "https://lastbit-website-static.onrender.com",
@@ -148,8 +148,8 @@ export const projectsData = [
   {
     title: "Bitcoin Merchant App",
     description:
-      "Allowing merchants to accept bitcoin over the lightning network with a simple Cashier UI",
-    tags: ["React-Native", "bitcoind", "C-Lightning", "RPC", "Shell scripting"],
+      "Built a merchant application for accepting Bitcoin via the Lightning Network, featuring a user-friendly Cashier UI for seamless transactions.",
+    tags: ["React-Native", "bitcoind", "C-Lightning", "RPC"],
     imageUrl: "/BTC_Merchant_app.png",
     externalLink: "https://github.com/ashvinpanicker/cln-pay",
   },
@@ -163,7 +163,7 @@ export const projectsData = [
   {
     title: "SPECT Heart Analysis",
     description:
-      "Analysed datasets using machine learning models to predict if a person has a healthy heart or not",
+      "Utilized machine learning models to analyze datasets and predict heart health. Implemented efficient algorithms for AI-driven healthcare solutions.",
     tags: ["AI/ML", "Orange3", "Python", "scikit-learn"],
     imageUrl: "/heartRiskAnalysis.png",
     externalLink: "/College-Paper.pdf",
