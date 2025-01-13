@@ -52,6 +52,8 @@ export default function Intro() {
               delay: 0.1,
               duration: 0.7,
             }}
+            whileHover={{ rotate: [0, 20, -20, 20, -20, 0], transition: { duration: 0.5 } }}
+            whileTap={{ rotate: [0, 20, -20, 20, -20, 0], transition: { duration: 0.5 } }}
           >
             👋
           </motion.span>
@@ -64,11 +66,11 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         Hello, I'm <span className="font-bold">Ashvin Panicker </span>
-         - Senior Frontend Engineer specializing in React. 
-         I create <span className="italic">seamless user experiences</span> and build scalable web applications that drive{" "}
-         <span className="underline">business success.</span>
+        - Senior Frontend Engineer specializing in React.
+        I create <span className="italic">seamless user experiences</span> and build scalable web applications that drive{" "}
+        <span className="underline">business success.</span>
       </motion.h1>
-      
+
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
