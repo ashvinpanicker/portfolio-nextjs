@@ -107,28 +107,23 @@ export const experiencesData =[
 
 export const projectsData = [
   {
-    title: "Sell247",
-    description:
-      "Developed a responsive frontend for an AI-powered chatbot, boosting user engagement and optimizing integration for seamless deployment on client websites.",
-    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
-    imageUrl: "/Chatbot-ss.png",
-    externalLink: "https://demo.sell247.ai/arihantp/",
+    title: "Rapid Website Prototyping",
+    description: "Helping small businesses and startups get online quickly with a simple, responsive website.",
+    tags: ["AI Website Scaffolding", "Website Deployment", "SEO"],
+    imageUrl: "/chillimilli.jpeg",
+    externalLink: " https://chillimilli.vercel.app/",
   },
+
   {
-    title: "WTSC Golf Website",
+    title: "Responsive Website Design / Redesign",
     description:
-      "Revamped a client's Webflow website by applying responsive web design and fundamental design principles to improve presentation and mobile usability.",
-    tags: ["Webflow", "Responsive Web Design"],
+      "Improving existing websites with clean layouts and responsive design to enhance mobile usability and overall presentation.",
+    tags: ["Webflow", "Wordpress", "Responsive Web Design"],
     imageUrl: "/wtsc.png",
     externalLink: "https://www.worldteamsgolf.com/",
   },
-  {
-    title: "MIRA - Smart Mirror",
-    description: "Created a smart mirror prototype to explore home automation technologies, integrating hardware and software seamlessly.",
-    tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
-    imageUrl: "/MIRA.jpeg",
-    externalLink: "https://magicmirror.builders/",
-  },
+
+
   {
     title: "Aquaoutback",
     description:
@@ -137,6 +132,42 @@ export const projectsData = [
     imageUrl: "/aqua_wallpaper.png",
     externalLink: "https://aquaoutback.com",
   },
+
+  {
+    title: "Intentional Living",
+    description: "A community to help people reduce their screen time by sharing goals and holding each other accountable. Want to join? Get in touch!",
+    tags: ["Community management", "Productivity", "Mindfulness"],
+    imageUrl: "/Intentional_Living.png",
+    externalLink: "https://docs.google.com/spreadsheets/d/1GZilnK9TAB8eKam6J1dEkUE23r4H686ke6jXxCWYXT4/edit?disco=AAABd7Z5zZ0",
+  },
+
+
+  {
+    title: "Experience Profile",
+    description:
+      "A simple react app that allows you to visualize statistics of your choice in a clean and interactive way.",
+    tags: ["ReactJS", "Typescript", "HTML/CSS"],
+    imageUrl: "/xppro.png",
+    externalLink: "https://xppro.vercel.app/",
+  },
+
+  {
+    title: "react-practice-calendar",
+    description:
+      "My free open source solutions to the React Practice Calendar challenges by the reactpractice.dev team.",
+    tags: ["React.js", "TypeScript", "CSS"],
+    imageUrl: "/react-practice-calendar.png",
+    externalLink: "https://react-practice-calendar.vercel.app/",
+  },
+
+  {
+    title: "MIRA - Smart Mirror",
+    description: "Created a smart mirror prototype to explore home automation technologies, integrating hardware and software seamlessly.",
+    tags: ["Raspberry PI", "Javascript", "Linux", "MMM", "Carpentry"],
+    imageUrl: "/MIRA.jpeg",
+    externalLink: "https://magicmirror.builders/",
+  },
+
   {
     title: "lastbit website",
     description:
@@ -145,6 +176,8 @@ export const projectsData = [
     imageUrl: "/bitcoin-zeus.gif",
     externalLink: "https://lastbit-website-static.onrender.com",
   },
+
+
   {
     title: "Bitcoin Merchant App",
     description:
@@ -153,13 +186,26 @@ export const projectsData = [
     imageUrl: "/BTC_Merchant_app.png",
     externalLink: "https://github.com/ashvinpanicker/cln-pay",
   },
-  // {
-  //   title: "Intentional Living",
-  //   description: "A community to help people reduce their screen time",
-  //   tags: ["Discord community management", "Productivity", "Mindfulness"],
-  //   imageUrl: "/Intentional_Living.png",
-  //   externalLink: "https://twitter.com",
-  // },
+
+
+
+
+  {
+    title: "Sell247",
+    description:
+      "Developed a responsive frontend for an AI-powered chatbot, boosting user engagement and optimizing integration for seamless deployment on client websites.",
+    tags: ["ReactJS", "Javascript", "Typescript", "HTML/CSS"],
+    imageUrl: "/Chatbot-ss.png",
+    externalLink: "https://github.com/ashvinpanicker/react-tsx-chatbot",
+  },
+  
+
+  
+
+
+
+  
+  
   {
     title: "SPECT Heart Analysis",
     description:
