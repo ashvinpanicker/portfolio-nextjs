@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nivo/bar": "^0.88.0",
+    "@nivo/circle-packing": "^0.88.0",
+    "@nivo/core": "^0.88.0",
     "@react-email/components": "^0.0.7",
     "@react-email/tailwind": "^0.0.8",
     "@types/node": "20.3.2",
