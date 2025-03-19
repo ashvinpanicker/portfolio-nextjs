@@ -65,11 +65,21 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
+        Hello, I'm <span className="font-bold">Ashvin Panicker</span> – a Senior Software Engineer focused on 
+        building <span className="underline decoration-primary underline-offset-4">high-impact, intuitive digital products</span>{" "}
+        with <span className="italic">modern web technologies</span>.
+      </motion.h1>
+
+      {/* <motion.h1
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         Hello, I'm <span className="font-bold">Ashvin Panicker </span>
         - Senior Frontend Engineer specializing in React.
         I create <span className="italic">seamless user experiences</span> and build scalable web applications that drive{" "}
         <span className="underline">business success.</span>
-      </motion.h1>
+      </motion.h1> */}
 
 
       <motion.div
