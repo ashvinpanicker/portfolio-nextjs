@@ -32,6 +32,9 @@ export default function Skills() {
     >
       <SectionHeading>My skills</SectionHeading>
       <SkillsCirclePack />
+      <p className="mt-4 text-gray-600 dark:text-gray-400">
+        Click on a circle to zoom in. Click outside to zoom out
+      </p>
     </section>
   );
   // return (

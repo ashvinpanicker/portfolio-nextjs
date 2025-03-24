@@ -14,7 +14,6 @@ const commonProperties = {
 };
 
 // TODO Fix theme colors
-// TODO add instructions on how to zoom in and out
 // TODO Change Data
 export const SkillsCirclePack: FC = () => {
   const [zoomedId, setZoomedId] = useState<string | null>(null);
