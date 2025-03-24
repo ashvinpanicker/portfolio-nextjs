@@ -14,7 +14,6 @@ const commonProperties = {
 };
 
 // TODO Fix theme colors
-// TODO Cursor pointer on hover
 // TODO add instructions on how to zoom in and out
 // TODO Change Data
 export const SkillsCirclePack: FC = () => {
@@ -42,6 +41,9 @@ export const SkillsCirclePack: FC = () => {
       motionConfig="slow"
       onClick={(node) => {
         setZoomedId(zoomedId === node.id ? null : node.id);
+      }}
+      onMouseEnter={(_, event) => {
+        (event.currentTarget as HTMLElement).style.cursor = "pointer";
       }}
     />
   );
