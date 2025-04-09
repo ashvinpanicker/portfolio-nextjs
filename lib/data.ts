@@ -146,7 +146,7 @@ export const projectsData = [
     title: "Experience Profile",
     description:
       "A simple react app that allows you to visualize statistics of your choice in a clean and interactive way.",
-    tags: ["ReactJS", "Typescript", "HTML/CSS"],
+    tags: ["Vibe Coding", "ReactJS", "Typescript"],
     imageUrl: "/xppro.png",
     externalLink: "https://xppro.vercel.app/",
   },
@@ -290,4 +290,86 @@ export const skillsData = [
   "Bitcoin",
   "Java",
   "C++",
+  // Angular
+  
+  // research
+  // strategic thinking
+  // imagination
+  // problem solving
+  // creativity
+  // adaptability
+  // teamwork
+  // communication
+  // leadership
+  // time management
+  // decision making
+  // negotiation
+  // conflict resolution
+  // emotional intelligence
+  // critical thinking
+  // self-motivation
+  // resilience
+  // risk management
+  // project management
+  // business acumen
+  // customer service
+  // sales
+  // marketing
+  // networking
+  // public speaking
+  // mentoring
+  // coaching
+  // teaching
+  // facilitation
+  // user experience
+  // user interface
+  // web development
+  // mobile development
+  // data analysis
+  // data visualization
+  // machine learning
+  // artificial intelligence
+  // blockchain
+  // cryptocurrency
+  // cloud computing
+  // cybersecurity
+  // internet of things
+  // augmented reality
+  // virtual reality
+  // game development
+  // robotics
+  // 3D printing
+  // electronics
+  // hardware
+  // software development
+  // embedded systems
+  // firmware
+  // computer vision
+  // natural language processing
+  // speech recognition
+  // image processing
+  // audio processing
+  // video processing
+  // signal processing
+  // computer graphics
+
+  // Personality - objective (teamwork, communication, leadership, etc.) subjective (imagination, creativity, SME etc.)
+  // Graphoria
+  // Ideaphoria
+  // Structural visualization
+  // Inductive Reasoning
+  // Analytical Reasoning
+  // Finger Dexterity
+  // Tweezer Dexterity
+  // Observation
+  // Design / Visual Memory
+  // Tonal Memory
+  // Pitch discrimination
+  // Rhythm memory
+  // Timbre discrimination
+  // Number memory
+  // Numerical reasoning
+  // Silograms
+  // Foresight
+  // Color perception
 ] as const;

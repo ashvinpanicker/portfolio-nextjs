@@ -16,9 +16,34 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Ashvin Panicker | Senior React Developer",
-  description: "Explore the portfolio of Ashvin Panicker, a Senior Software Engineer specializing in web development using React.js with over 8 years of experience.",
-};
+  title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
+  description:
+    'Senior frontend engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
+  metadataBase: new URL('https://ashvinpanicker.com'),
+  openGraph: {
+    title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
+    description:
+      'I specialize in frontend and full-stack development using React, Next.js, and React Native. With a sharp eye for design and performance, I help startups launch better products—faster.',
+    url: 'https://ashvinpanicker.com',
+    siteName: 'Ashvin Panicker',
+    images: [
+      {
+        url: 'https://ashvinpanicker.com/AP2.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ashvin Panicker | UX-Focused Full-Stack Developer',
+    description:
+      'Frontend-first full-stack developer with expertise in React, Next.js, and UI/UX. Helping startups build high-quality web and mobile apps that users love.',
+    images: ['https://ashvinpanicker.com/AP2.png'],
+  },
+}
 
 export default function RootLayout({
   children,
