@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -68,7 +69,7 @@ export default function RootLayout({
         <Script
           id="json-ld"
           type="application/ld+json"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
