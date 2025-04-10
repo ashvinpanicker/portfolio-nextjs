@@ -38,7 +38,7 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData =[
+export const experiencesData = [
   {
     "title": "Freelance Application Developer",
     "location": "Remote",
@@ -113,7 +113,6 @@ export const projectsData = [
     imageUrl: "/chillimilli.jpeg",
     externalLink: " https://chillimilli.vercel.app/",
   },
-
   {
     title: "Responsive Website Design / Redesign",
     description:
@@ -122,8 +121,6 @@ export const projectsData = [
     imageUrl: "/wtsc.png",
     externalLink: "https://www.worldteamsgolf.com/",
   },
-
-
   {
     title: "Aquaoutback",
     description:
@@ -132,7 +129,6 @@ export const projectsData = [
     imageUrl: "/aqua_wallpaper.png",
     externalLink: "https://aquaoutback.com",
   },
-
   {
     title: "Intentional Living",
     description: "A community to help people reduce their screen time by sharing goals and holding each other accountable. Want to join? Get in touch!",
@@ -140,8 +136,6 @@ export const projectsData = [
     imageUrl: "/Intentional_Living.png",
     externalLink: "https://docs.google.com/spreadsheets/d/1GZilnK9TAB8eKam6J1dEkUE23r4H686ke6jXxCWYXT4/edit?disco=AAABd7Z5zZ0",
   },
-
-
   {
     title: "Experience Profile",
     description:
@@ -150,7 +144,6 @@ export const projectsData = [
     imageUrl: "/xppro.png",
     externalLink: "https://xppro.vercel.app/",
   },
-
   {
     title: "react-practice-calendar",
     description:
@@ -159,7 +152,6 @@ export const projectsData = [
     imageUrl: "/react-practice-calendar.png",
     externalLink: "https://react-practice-calendar.vercel.app/",
   },
-
   {
     title: "MIRA - Smart Mirror",
     description: "Created a smart mirror prototype to explore home automation technologies, integrating hardware and software seamlessly.",
@@ -167,7 +159,6 @@ export const projectsData = [
     imageUrl: "/MIRA.jpeg",
     externalLink: "https://magicmirror.builders/",
   },
-
   {
     title: "lastbit website",
     description:
@@ -176,8 +167,6 @@ export const projectsData = [
     imageUrl: "/bitcoin-zeus.gif",
     externalLink: "https://lastbit-website-static.onrender.com",
   },
-
-
   {
     title: "Bitcoin Merchant App",
     description:
@@ -186,10 +175,6 @@ export const projectsData = [
     imageUrl: "/BTC_Merchant_app.png",
     externalLink: "https://github.com/ashvinpanicker/cln-pay",
   },
-
-
-
-
   {
     title: "Sell247",
     description:
@@ -198,14 +183,6 @@ export const projectsData = [
     imageUrl: "/Chatbot-ss.png",
     externalLink: "https://github.com/ashvinpanicker/react-tsx-chatbot",
   },
-  
-
-  
-
-
-
-  
-  
   {
     title: "SPECT Heart Analysis",
     description:
@@ -226,6 +203,7 @@ export const skillsData = [
   // Frameworks & Libraries
   "React.js",
   "Next.js",
+  "Angular",
   "Redux / Redux-Saga",
   "Zustand",
 
@@ -290,8 +268,8 @@ export const skillsData = [
   "Bitcoin",
   "Java",
   "C++",
-  // Angular
-  
+
+  // What skills could you possibly have as a human on planet earth?
   // research
   // strategic thinking
   // imagination
