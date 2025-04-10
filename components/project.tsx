@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useRef } from "react";
@@ -56,7 +55,7 @@ export default function Project({
           <Image
             src={imageUrl}
             alt="Project I worked on"
-            // quality={95}
+            quality={95}
             width={256}
             height={256}
             className="
