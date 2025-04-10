@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata = {
   title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
   description:
-    'Senior frontend engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
+    'Frontend focused full-stack engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
   metadataBase: new URL('https://ashvinpanicker.com'),
   openGraph: {
     title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
@@ -29,7 +29,7 @@ export const metadata = {
     siteName: 'Ashvin Panicker',
     images: [
       {
-        url: 'https://ashvinpanicker.com/AP2.png',
+        url: 'https://ashvinpanicker.com/api/og',
         width: 1200,
         height: 630,
       },
@@ -42,7 +42,11 @@ export const metadata = {
     title: 'Ashvin Panicker | UX-Focused Full-Stack Developer',
     description:
       'Frontend-first full-stack developer with expertise in React, Next.js, and UI/UX. Helping startups build high-quality web and mobile apps that users love.',
-    images: ['https://ashvinpanicker.com/AP2.png'],
+    images: [{
+      url: 'https://ashvinpanicker.com/api/og',
+      width: 1200,
+      height: 630,
+    }],
   },
 }
 
@@ -100,7 +104,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Ashvin Panicker",
               url: "https://ashvinpanicker.com",
-              image: "https://ashvinpanicker.com/AP2.png",
+              image: "https://ashvinpanicker.com/api/og",
               jobTitle: "Full-Stack Web Developer",
               worksFor: {
                 "@type": "Organization",
