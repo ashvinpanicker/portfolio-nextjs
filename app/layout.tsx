@@ -20,6 +20,11 @@ export const metadata = {
   title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
   description:
     'Frontend focused full-stack engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/icons/icon-192x192.png',
+  },
   metadataBase: new URL('https://ashvinpanicker.com'),
   openGraph: {
     title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
@@ -58,6 +63,35 @@ export default function RootLayout({
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   return (
     <html lang="en" className="!scroll-smooth">
+      <head>
+        {/* JSON-LD for SEO */}
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ashvin Panicker",
+              url: "https://ashvinpanicker.com",
+              image: "https://ashvinpanicker.com/api/og",
+              jobTitle: "Full-Stack Web Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Tailgrab Digital",
+              },
+              sameAs: [
+                "https://github.com/ashvinpanicker",
+                "https://www.linkedin.com/in/ashvinpanicker/",
+                "https://soundcloud.com/ashvin-panicker",
+                "https://www.youtube.com/@ashvinpanicker",
+                "https://www.instagram.com/ashvinpanicker/",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
@@ -92,34 +126,6 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
-
-        {/* JSON-LD for SEO */}
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Ashvin Panicker",
-              url: "https://ashvinpanicker.com",
-              image: "https://ashvinpanicker.com/api/og",
-              jobTitle: "Full-Stack Web Developer",
-              worksFor: {
-                "@type": "Organization",
-                name: "Tailgrab Digital",
-              },
-              sameAs: [
-                "https://github.com/ashvinpanicker",
-                "https://www.linkedin.com/in/ashvinpanicker/",
-                "https://soundcloud.com/ashvin-panicker",
-                "https://www.youtube.com/@ashvinpanicker",
-                "https://www.instagram.com/ashvinpanicker/",
-              ],
-            }),
-          }}
-        />
       </body>
     </html>
   );
