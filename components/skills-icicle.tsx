@@ -17,8 +17,8 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
   useEffect(() => {
     if (!data) return;
 
-    const width = 928;
-    const height = 1200;
+    const width = 1024;
+    const height = 768;
 
     const color = d3.scaleOrdinal(
       d3.quantize(d3.interpolateRainbow, data.children?.length || 1 + 1)
@@ -40,7 +40,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("width", width)
       .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
+      .attr("style", "max-width: 100%; height: auto; font: 14px sans-serif;"); // Increased font size
 
     const cell = svg
       .selectAll("g")
@@ -54,28 +54,30 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("height", (d) => rectHeight(d))
       .attr("fill-opacity", 0.6)
       .attr("fill", (d) => {
-        if (!d.depth) return "#ccc";
+        if (!d.depth) return "#aaa";
         let ancestor = d;
         while (ancestor.depth > 1) ancestor = ancestor.parent!;
         return color(ancestor.data.name);
       })
-      .style("cursor", "pointer")
-      .on("click", (event, p) => clicked(event, p));
+      .style("cursor", (d) => (d.children ? "pointer" : "default")) // Disable pointer cursor for leaf nodes
+      .on("click", (_, p) => {
+        if (p.children) clicked(p); // Only allow clicks on nodes with children
+      });
 
     const text = cell
       .append("text")
       .style("user-select", "none")
       .attr("pointer-events", "none")
-      .attr("x", 4)
+      .attr("x", 5)
       .attr("y", 13)
+      .attr("fill", "rgba(249, 250, 251, 0.9)") // Changed text color to white
       .attr("fill-opacity", (d) => +labelVisible(d));
 
     text.append("tspan").text((d) => d.data.name);
 
     const tspan = text
       .append("tspan")
-      .attr("fill-opacity", (d) => labelVisible(d) * 0.7)
-      // .text(d => ` ${d.value}`); // Uncomment to show values
+      .attr("fill-opacity", (d) => labelVisible(d) * 0.7);
 
     cell
       .append("title")
@@ -85,7 +87,8 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
 
     let focus = root;
 
-    function clicked(event: MouseEvent, p: typeof root) {
+    function clicked(p: typeof root) {
+      if (p === root) return; // Prevent clicking on the root element
       focus = focus === p ? (p = p.parent!) : p;
 
       root.each((d: any) => {
