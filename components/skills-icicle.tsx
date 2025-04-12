@@ -11,7 +11,7 @@ interface Props {
   data: NodeDatum;
 }
 
-const PartitionChart: React.FC<Props> = ({ data }) => {
+const VerticalIcicleChart: React.FC<Props> = ({ data }) => {
   const ref = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
@@ -19,6 +19,8 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
 
     const width = 1024;
     const height = 768;
+    const textPadding = 4;
+    const format = d3.format(",d");
 
     const color = d3.scaleOrdinal(
       d3.quantize(d3.interpolateRainbow, data.children?.length || 1 + 1)
@@ -29,97 +31,95 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .sum((d) => d.value || 0)
       .sort((a, b) => b.height - a.height || (b.value || 0) - (a.value || 0));
 
-    const root = d3
-      .partition<NodeDatum>()
-      .size([height, (hierarchy.height + 1) * width / 3])(hierarchy);
+    const root = d3.partition<NodeDatum>().size([width, (hierarchy.height + 1) * height / 3])(hierarchy);
+    let focus = root;
 
     const svg = d3.select(ref.current);
-    svg.selectAll("*").remove(); // Clear previous render
+    svg.selectAll("*").remove();
 
     svg
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("width", width)
       .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; font: 14px sans-serif;"); // Increased font size
+      .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
 
     const cell = svg
       .selectAll("g")
       .data(root.descendants())
       .join("g")
-      .attr("transform", (d) => `translate(${d.y0},${d.x0})`);
+      .attr("transform", (d) => `translate(${d.x0},${d.y0})`);
 
     const rect = cell
       .append("rect")
-      .attr("width", (d) => d.y1 - d.y0 - 1)
-      .attr("height", (d) => rectHeight(d))
+      .attr("height", (d) => d.y1 - d.y0 - 1)
+      .attr("width", (d) => rectWidth(d))
       .attr("fill-opacity", 0.6)
       .attr("fill", (d) => {
-        if (!d.depth) return "#aaa";
+        if (!d.depth) return "#ccc";
         let ancestor = d;
         while (ancestor.depth > 1) ancestor = ancestor.parent!;
         return color(ancestor.data.name);
       })
-      .style("cursor", (d) => (d.children ? "pointer" : "default")) // Disable pointer cursor for leaf nodes
+      .style("cursor", (d) => (d.children ? "pointer" : "default"))
       .on("click", (_, p) => {
-        if (p.children) clicked(p); // Only allow clicks on nodes with children
+        if (p.children) clicked(p);
       });
 
     const text = cell
       .append("text")
       .style("user-select", "none")
       .attr("pointer-events", "none")
-      .attr("x", 5)
+      .attr("x", textPadding)
       .attr("y", 13)
-      .attr("fill", "rgba(249, 250, 251, 0.9)") // Changed text color to white
-      .attr("fill-opacity", (d) => +labelVisible(d));
-
-    text.append("tspan").text((d) => d.data.name);
-
-    const tspan = text
-      .append("tspan")
-      .attr("fill-opacity", (d) => labelVisible(d) * 0.7);
+      .text((d) => `${d.data.name} ${format(d.value ?? 0)}`)
+      .attr("fill", "#fff")
+      .attr("fill-opacity", function (d) {
+        return +labelVisible(d, this);
+      });
 
     cell
       .append("title")
       .text((d) =>
-        `${d.ancestors().map((d) => d.data.name).reverse().join("/")}\n${d.value}`
+        `${d.ancestors().map((d) => d.data.name).reverse().join("/")}\n${format(d.value ?? 0)}`
       );
 
-    let focus = root;
-
     function clicked(p: typeof root) {
-      if (p === root) return; // Prevent clicking on the root element
       focus = focus === p ? (p = p.parent!) : p;
 
       root.each((d: any) => {
         d.target = {
-          x0: ((d.x0 - p.x0) / (p.x1 - p.x0)) * height,
-          x1: ((d.x1 - p.x0) / (p.x1 - p.x0)) * height,
           y0: d.y0 - p.y0,
           y1: d.y1 - p.y0,
+          x0: ((d.x0 - p.x0) / (p.x1 - p.x0)) * width,
+          x1: ((d.x1 - p.x0) / (p.x1 - p.x0)) * width,
         };
       });
 
       const t = cell
         .transition()
         .duration(750)
-        .attr("transform", (d: any) => `translate(${d.target.y0},${d.target.x0})`);
+        .attr("transform", (d: any) => `translate(${d.target.x0},${d.target.y0})`);
 
-      rect.transition(t).attr("height", (d: any) => rectHeight(d.target));
-      text.transition(t).attr("fill-opacity", (d: any) => +labelVisible(d.target));
-      tspan.transition(t).attr("fill-opacity", (d: any) => labelVisible(d.target) * 0.7);
+      rect.transition(t).attr("width", (d: any) => rectWidth(d.target));
+      text.transition(t).attr("fill-opacity", function (d: any) {
+        return +labelVisible(d.target, this);
+      });
     }
 
-    function rectHeight(d: any) {
+    function rectWidth(d: any) {
       return d.x1 - d.x0 - Math.min(1, (d.x1 - d.x0) / 2);
     }
 
-    function labelVisible(d: any): number {
-      return (d.y1 <= width && d.y0 >= 0 && d.x1 - d.x0 > 16) ? 1 : 0;
+    function labelVisible(d: any, label: SVGTextElement): boolean {
+      return (
+        d.x1 <= width &&
+        d.x0 >= 0 &&
+        d.x1 - d.x0 - 2 * textPadding > label.getComputedTextLength()
+      );
     }
   }, [data]);
 
   return <svg ref={ref} />;
 };
 
-export default PartitionChart;
+export default VerticalIcicleChart;
