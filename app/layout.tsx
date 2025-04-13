@@ -22,6 +22,7 @@ export const metadata = {
   description:
     'Frontend focused full-stack engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
   manifest: '/manifest.json',
+  canonical: "https://www.ashvinpanicker.com/",
   icons: {
     icon: '/favicon.ico',
     apple: '/icons/icon-192x192.png',
