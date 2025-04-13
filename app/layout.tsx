@@ -22,7 +22,6 @@ export const metadata = {
   description:
     'Frontend focused full-stack engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
   manifest: '/manifest.json',
-  canonical: "https://www.ashvinpanicker.com/",
   icons: {
     icon: '/favicon.ico',
     apple: '/icons/icon-192x192.png',
@@ -66,6 +65,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
+        {/* Canonical URL for Google Search Console */}
+        <link rel="canonical" href="https://www.ashvinpanicker.com/" />
         {/* JSON-LD for SEO */}
         <Script
           id="json-ld"
