@@ -107,6 +107,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Stashkart",
+    description:
+      "An e-commerce platform for a local business, featuring a custom-built website with integrated payment gateways and inventory management.",
+    tags: ["Shopify", "Razorpay", "Liquid", "Meta Business Suite"],
+    imageUrl: "/aqua_wallpaper.png",
+    externalLink: "https://stashkart.in",
+  },
+  {
     title: "Rapid Website Prototyping",
     description: "Helping small businesses and startups get online quickly with a simple, responsive website.",
     tags: ["AI Website Scaffolding", "Website Deployment", "SEO"],
@@ -114,7 +122,7 @@ export const projectsData = [
     externalLink: " https://chillimilli.vercel.app/",
   },
   {
-    title: "Responsive Website Design / Redesign",
+    title: "Website Design & Maintenance",
     description:
       "Improving existing websites with clean layouts and responsive design to enhance mobile usability and overall presentation.",
     tags: ["Webflow", "Wordpress", "Responsive Web Design"],
@@ -214,6 +222,14 @@ export const skillsData = [
   "ant-design",
   "Storybook",
 
+  // Site Builders
+  "Webflow",
+  "Wordpress",
+  "Shopify",
+  "Gatsby",
+  "PHP",
+  "SEO",
+
   // Data Visualization
   "D3.js",
   "victory-charts",
@@ -225,6 +241,7 @@ export const skillsData = [
   // Backend & Database
   "Node.js",
   "Express",
+  "Python",
   "MongoDB",
   "PostgreSQL",
 
@@ -260,8 +277,6 @@ export const skillsData = [
 
   // Additional Skills (for versatility)
   "Jquery",
-  "Wordpress",
-  "Webflow",
   "GIMP",
   "ImageMagick",
   "Entrepreneurship",
