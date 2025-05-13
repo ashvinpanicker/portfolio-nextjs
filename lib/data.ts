@@ -107,14 +107,6 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Stashkart",
-    description:
-      "An e-commerce platform for a local business, featuring a custom-built website with integrated payment gateways and inventory management.",
-    tags: ["Shopify", "Razorpay", "Liquid", "Meta Business Suite"],
-    imageUrl: "/aqua_wallpaper.png",
-    externalLink: "https://stashkart.in",
-  },
-  {
     title: "Rapid Website Prototyping",
     description: "Helping small businesses and startups get online quickly with a simple, responsive website.",
     tags: ["AI Website Scaffolding", "Website Deployment", "SEO"],
@@ -124,10 +116,18 @@ export const projectsData = [
   {
     title: "Website Design & Maintenance",
     description:
-      "Improving existing websites with clean layouts and responsive design to enhance mobile usability and overall presentation.",
+    "Improving existing websites with clean layouts and responsive design to enhance mobile usability and overall presentation.",
     tags: ["Webflow", "Wordpress", "Responsive Web Design"],
     imageUrl: "/wtsc.png",
     externalLink: "https://www.worldteamsgolf.com/",
+  },
+  {
+    title: "Stashkart",
+    description:
+      "An e-commerce platform for a local business, featuring a custom-built website with integrated payment gateways and inventory management.",
+    tags: ["Shopify", "Razorpay", "Liquid", "Meta Business Suite"],
+    imageUrl: "/stashkart-ss.webp",
+    externalLink: "https://stashkart.in",
   },
   {
     title: "Aquaoutback",
@@ -136,6 +136,14 @@ export const projectsData = [
     tags: ["Wordpress", "SEO", "Page speed optimization"],
     imageUrl: "/aqua_wallpaper.png",
     externalLink: "https://aquaoutback.com",
+  },
+  {
+    title: "Mapdout",
+    description:
+      "An AI powered travel planning tool that helps users create personalized itineraries based on their preferences and interests.",
+    tags: ["Bolt", "Github", "Netlify", "Supabase"],
+    imageUrl: "/mapdout-ss.webp",
+    externalLink: "https://mapdout.in",
   },
   {
     title: "Intentional Living",
