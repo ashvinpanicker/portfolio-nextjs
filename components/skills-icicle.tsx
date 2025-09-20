@@ -119,7 +119,12 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
     }
   }, [data]);
 
-  return <svg ref={ref} />;
+  return (
+    <div>
+      <p className="mb-3 italic">Click on a skill block to zoom in. Click on the parent block to zoom out.</p>
+      <svg ref={ref} />
+    </div>
+  );
 };
 
 export default PartitionChart;
