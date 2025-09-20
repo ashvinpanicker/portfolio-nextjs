@@ -5,6 +5,8 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import PartitionChart from "./skills-icicle";
+import skillsJson from "@/lib/skills.json";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -30,7 +32,8 @@ export default function Skills() {
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <PartitionChart data={skillsJson} />
+      {/* <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
             className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
@@ -46,7 +49,7 @@ export default function Skills() {
             {skill}
           </motion.li>
         ))}
-      </ul>
+      </ul> */}
     </section>
   );
 }
