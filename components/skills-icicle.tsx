@@ -86,7 +86,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
     cell
       .append("title")
       .text((d) =>
-        `${d.ancestors().map((d) => d.data.name).reverse().join("/")}\n${d.value}`
+        `${d.ancestors().map((d) => d.data.name).reverse().join("/")}`
       );
 
     let focus = root;
