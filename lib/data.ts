@@ -3,12 +3,17 @@ import { CgWorkAlt } from "react-icons/cg";
 import {
   FaReact,
   FaGuitar,
-  // FaRocket,
   FaBitcoin,
   FaPeopleArrows,
   FaChartBar,
   FaPiggyBank,
   FaUsers,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPalette,
+  FaSearchDollar,
+  FaRocket,
+  FaTools,
 } from "react-icons/fa";
 
 export const links = [
@@ -21,16 +26,20 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
     name: "Skills",
     hash: "#skills",
   },
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Services",
+    hash: "#services",
   },
   {
     name: "Contact",
@@ -105,18 +114,56 @@ export const experiencesData = [
   }
 ] as const;
 
-export const projectsData = [
+export const servicesData = [
   {
     title: "Rapid Website Prototyping",
-    description: "Helping small businesses and startups get online quickly with a simple, responsive website.",
-    tags: ["AI Website Scaffolding", "Website Deployment", "SEO"],
-    imageUrl: "/chillimilli.jpeg",
-    externalLink: " https://chillimilli.vercel.app/",
+    description: "Quickly launch responsive websites for small businesses and startups, ensuring a strong online presence.",
+    icon: FaRocket,
   },
   {
-    title: "Website Design & Maintenance",
+    title: "Cross Platform App Development",
     description:
-    "Improving existing websites with clean layouts and responsive design to enhance mobile usability and overall presentation.",
+      "Develop and deploy mobile applications for both Android and iOS using React Native, ensuring broad accessibility.",
+    icon: FaMobileAlt,
+  },
+  {
+    title: "Website Development, Design & Maintenance",
+    description:
+      "Deliver full-stack web applications, adhering to industry standards and client specifications, with ongoing support.",
+    icon: FaLaptopCode,
+  },
+  {
+    title: "Page Speed and SEO Optimization",
+    description:
+      "Enhance online visibility and search engine rankings, driving organic traffic to your digital platforms.",
+    icon: FaSearchDollar,
+  },
+  {
+    title: "UI / UX Design",
+    description:
+      "Craft intuitive and impactful user interfaces and experiences that leave a lasting impression.",
+    icon: FaPalette,
+  },
+  {
+    title: "Website Maintenance & Support",
+    description:
+      "Provide continuous maintenance and support to keep your website secure, updated, and performing at its best.",
+    icon: FaTools,
+  },
+] as const;
+
+export const projectsData = [
+  {
+    title: "Hotel Tashi Delek",
+    description: "A boutique hotel website with integrated emails reservations system, showcasing rooms and amenities with a focus on user experience.",
+    tags: ["React", "Supabase Edge Functions", "Supabase DB"],
+    imageUrl: "/HTD-Website.png",
+    externalLink: " https://hoteltashidelek.com/",
+  },
+  {
+    title: "World Teams Golf",
+    description:
+      "Maintained the website for an international golf tournament, ensuring a seamless user experience and effective online presence.",
     tags: ["Webflow", "Wordpress", "Responsive Web Design"],
     imageUrl: "/wtsc.png",
     externalLink: "https://www.worldteamsgolf.com/",
@@ -124,33 +171,49 @@ export const projectsData = [
   {
     title: "Stashkart",
     description:
-      "An e-commerce platform for a local business, featuring a custom-built website with integrated payment gateways and inventory management.",
+      "An e-commerce platform for a local business, featuring a custom-built shopify theme with integrated payment gateways and inventory management.",
     tags: ["Shopify", "Razorpay", "Liquid", "Meta Business Suite"],
-    imageUrl: "/stashkart-ss.webp",
+    imageUrl: "/stashkart.png",
     externalLink: "https://stashkart.in",
+  },
+  {
+    title: "YouTwitch",
+    description:
+      "Watch Higher Quality Rewindable Youtube Streams with all of the action from Twitch Chat on a single page. The best of both worlds.",
+    tags: ["Bolt.new", "Kilo Code AI", "Gemini Glash 2.5", "Vibecoding"],
+    imageUrl: "/youtwitch-app.png",
+    externalLink: "https://youtwitch.vercel.app",
+  },
+  {
+    title: "IDFC Golf Rewards",
+    description:
+      "Designed and developed a rewards portal interface for a leading financial institution, enabling users to redeem points for golf-related benefits.",
+    tags: ["React", "Javascript", "HTML5", "CSS3"],
+    imageUrl: "/IDFC.png",
+    externalLink: "https://golftripz-prototype.vercel.app/",
   },
   {
     title: "Aquaoutback",
     description:
-      "Managed the website and online booking system for a boutique resort and watersports academy in Tamil Nadu.",
+      "Managed the website, event updates, and online booking system for a boutique resort and watersports academy in Tamil Nadu.",
     tags: ["Wordpress", "SEO", "Page speed optimization"],
     imageUrl: "/aqua_wallpaper.png",
     externalLink: "https://aquaoutback.com",
   },
   {
+    title: "Heboga",
+    description: "Quick marketing website for a local confectionary business, built with React and hosted on Vercel.",
+    tags: ["React", "KiloCode AI", "Godaddy"],
+    imageUrl: "/chillimilli.jpeg",
+    externalLink: " https://heboga.com/",
+  },
+  {
     title: "Mapdout",
     description:
       "An AI powered travel planning tool that helps users create personalized itineraries based on their preferences and interests.",
-    tags: ["Bolt", "Github", "Netlify", "Supabase"],
+    tags: ["Bolt.new", "Github", "Netlify", "Supabase"],
     imageUrl: "/mapdout-ss.webp",
     externalLink: "https://mapdout.in",
-  },
-  {
-    title: "Intentional Living",
-    description: "A community to help people reduce their screen time by sharing goals and holding each other accountable. Want to join? Get in touch!",
-    tags: ["Community management", "Productivity", "Mindfulness"],
-    imageUrl: "/Intentional_Living.png",
-    externalLink: "https://docs.google.com/spreadsheets/d/1GZilnK9TAB8eKam6J1dEkUE23r4H686ke6jXxCWYXT4/edit?disco=AAABd7Z5zZ0",
   },
   {
     title: "Experience Profile",
@@ -161,12 +224,11 @@ export const projectsData = [
     externalLink: "https://xppro.vercel.app/",
   },
   {
-    title: "react-practice-calendar",
-    description:
-      "My free open source solutions to the React Practice Calendar challenges by the reactpractice.dev team.",
-    tags: ["React.js", "TypeScript", "CSS"],
-    imageUrl: "/react-practice-calendar.png",
-    externalLink: "https://react-practice-calendar.vercel.app/",
+    title: "Intentional Living",
+    description: "A community to help people reduce their screen time by sharing goals and holding each other accountable. Want to join? Get in touch!",
+    tags: ["Community management", "Productivity", "Mindfulness"],
+    imageUrl: "/Intentional_Living.png",
+    externalLink: "https://docs.google.com/spreadsheets/d/1GZilnK9TAB8eKam6J1dEkUE23r4H686ke6jXxCWYXT4/edit?disco=AAABd7Z5zZ0",
   },
   {
     title: "MIRA - Smart Mirror",
@@ -175,11 +237,26 @@ export const projectsData = [
     imageUrl: "/MIRA.jpeg",
     externalLink: "https://magicmirror.builders/",
   },
+  // {
+  //   title: "Physio App",
+  //   description: "Vibecoded a physio therapy app to help me do exercises at home after a sports injury.",
+  //   tags: ["Vibecoding", "ReactJS", "Typescript"],
+  //   imageUrl: "/MIRA.jpeg",
+  //   externalLink: "https://magicmirror.builders/",
+  // },
   {
-    title: "lastbit website",
+    title: "react-practice-calendar",
     description:
-      "Designed and developed multiple iterations of a startup website during my time as a co-founder, emphasizing scalability and performance.",
-    tags: ["ReactJS", "Gatsby", "CSS"],
+    "My free open source solutions to the React Practice Calendar challenges by the reactpractice.dev team.",
+    tags: ["React.js", "TypeScript", "CSS"],
+    imageUrl: "/react-practice-calendar.png",
+    externalLink: "https://react-practice-calendar.vercel.app/",
+  },
+  {
+    title: "lastbit",
+    description:
+      "Spend your Bitcoin instantly anywhere in Europe with the lastbit debit card powered MasterCard.",
+    tags: ["Bitcoin", "React-Native", "Entrepreneurship", "ReactJS", "Gatsby", "CSS"],
     imageUrl: "/bitcoin-zeus.gif",
     externalLink: "https://lastbit-website-static.onrender.com",
   },
