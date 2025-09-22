@@ -1,5 +1,6 @@
 import * as d3 from "d3";
 import React, { useEffect, useRef } from "react";
+import { useTheme } from "@/context/theme-context";
 
 interface NodeDatum {
   name: string;
@@ -13,6 +14,7 @@ interface Props {
 
 const PartitionChart: React.FC<Props> = ({ data }) => {
   const ref = useRef<SVGSVGElement | null>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!data) return;
@@ -21,7 +23,9 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
     const height = 768;
 
     const color = d3.scaleOrdinal(
-      d3.quantize(d3.interpolateRainbow, data.children?.length || 1 + 1)
+      theme === "light"
+        ? d3.quantize(d3.interpolateRgbBasis(["#8ecae6", "#219ebc", "#023047"]), data.children?.length || 1 + 1)
+        : d3.quantize(d3.interpolateRainbow, data.children?.length || 1 + 1)
     );
 
     const hierarchy = d3
@@ -54,7 +58,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("height", (d) => rectHeight(d))
       .attr("fill-opacity", 0.6)
       .attr("fill", (d) => {
-        if (!d.depth) return "#aaa";
+        if (!d.depth) return theme === "light" ? "#ccc" : "#aaa";
         let ancestor = d;
         while (ancestor.depth > 1) ancestor = ancestor.parent!;
         return color(ancestor.data.name);
@@ -70,7 +74,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("pointer-events", "none")
       .attr("x", 5)
       .attr("y", 13)
-      .attr("fill", "rgba(249, 250, 251, 0.9)") // Changed text color to white
+      .attr("fill", theme === "light" ? "black" : "rgba(249, 250, 251, 0.9)") // Changed text color to black in light mode, white in dark mode
       .attr("fill-opacity", (d) => +labelVisible(d));
 
     text.append("tspan").text((d) => d.data.name);
@@ -117,7 +121,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
     function labelVisible(d: any): number {
       return (d.y1 <= width && d.y0 >= 0 && d.x1 - d.x0 > 16) ? 1 : 0;
     }
-  }, [data]);
+  }, [data, theme]);
 
   return (
     <div>
