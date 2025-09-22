@@ -3,12 +3,17 @@ import { CgWorkAlt } from "react-icons/cg";
 import {
   FaReact,
   FaGuitar,
-  // FaRocket,
   FaBitcoin,
   FaPeopleArrows,
   FaChartBar,
   FaPiggyBank,
   FaUsers,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPalette,
+  FaSearchDollar,
+  FaRocket,
+  FaTools,
 } from "react-icons/fa";
 
 export const links = [
@@ -17,20 +22,24 @@ export const links = [
     hash: "#home",
   },
   {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
+    name: "Services",
+    hash: "#services",
   },
   {
     name: "Skills",
     hash: "#skills",
   },
   {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "About",
+    hash: "#about",
   },
   {
     name: "Contact",
@@ -105,11 +114,49 @@ export const experiencesData = [
   }
 ] as const;
 
-export const projectsData = [
+export const servicesData = [
   {
     title: "Rapid Website Prototyping",
+    description: "Quickly launch responsive websites for small businesses and startups, ensuring a strong online presence.",
+    icon: FaRocket,
+  },
+   {
+    title: "Cross Platform App Development",
+    description:
+    "Develop and deploy mobile applications for both Android and iOS using React Native, ensuring broad accessibility.",
+    icon: FaMobileAlt,
+  },
+  {
+    title: "Website Development, Design & Maintenance",
+    description:
+    "Deliver full-stack web applications, adhering to industry standards and client specifications, with ongoing support.",
+    icon: FaLaptopCode,
+  },
+  {
+    title: "Page Speed and SEO Optimization",
+    description:
+    "Enhance online visibility and search engine rankings, driving organic traffic to your digital platforms.",
+    icon: FaSearchDollar,
+  },
+  {
+    title: "UI / UX Design",
+    description:
+    "Craft intuitive and impactful user interfaces and experiences that leave a lasting impression.",
+    icon: FaPalette,
+  },
+  {
+    title: "Website Maintenance & Support",
+    description:
+    "Provide continuous maintenance and support to keep your website secure, updated, and performing at its best.",
+    icon: FaTools,
+  },
+] as const;
+
+export const projectsData = [
+  {
+    title: "Hotel Tashi Delek",
     description: "Helping small businesses and startups get online quickly with a simple, responsive website.",
-    tags: ["AI Website Scaffolding", "Website Deployment", "SEO"],
+    tags: ["React", "Supabase Edge Functions", "Supabase DB"],
     imageUrl: "/chillimilli.jpeg",
     externalLink: " https://chillimilli.vercel.app/",
   },

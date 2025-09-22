@@ -121,7 +121,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
 
   return (
     <div>
-      <p className="mb-3 italic">Click on a skill block to zoom in. Click on the parent block to zoom out.</p>
+      <p className="mb-3 italic mt-[-20px]">Click on a skill block to zoom in. Click on the parent block to zoom out.</p>
       <svg ref={ref} />
     </div>
   );
