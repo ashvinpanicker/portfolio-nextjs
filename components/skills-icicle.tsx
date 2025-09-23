@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "@/context/theme-context";
 
 interface NodeDatum {
@@ -15,12 +15,25 @@ interface Props {
 const PartitionChart: React.FC<Props> = ({ data }) => {
   const ref = useRef<SVGSVGElement | null>(null);
   const { theme } = useTheme();
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
-    if (!data) return;
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
 
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial width
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!data || screenWidth === 0) return;
+
+    const isMobile = screenWidth < 768; // Define your mobile breakpoint
     const width = 1024;
-    const height = 768;
+    const height = isMobile ? 1024 : 768; // Increased height for mobile
 
     const color = d3.scaleOrdinal(
       theme === "light"
@@ -44,7 +57,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("width", width)
       .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; font: 14px sans-serif;"); // Increased font size
+      .attr("style", `max-width: 100%; height: auto; font: ${isMobile ? 18 : 14}px sans-serif;`); // Increased font size for mobile
 
     const cell = svg
       .selectAll("g")
@@ -73,7 +86,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .style("user-select", "none")
       .attr("pointer-events", "none")
       .attr("x", 5)
-      .attr("y", 13)
+      .attr("y", 15)
       .attr("fill", theme === "light" ? "black" : "rgba(249, 250, 251, 0.9)") // Changed text color to black in light mode, white in dark mode
       .attr("fill-opacity", (d) => +labelVisible(d));
 
@@ -121,7 +134,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
     function labelVisible(d: any): number {
       return (d.y1 <= width && d.y0 >= 0 && d.x1 - d.x0 > 16) ? 1 : 0;
     }
-  }, [data, theme]);
+  }, [data, theme, screenWidth]);
 
   return (
     <div>
