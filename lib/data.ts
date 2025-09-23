@@ -14,6 +14,7 @@ import {
   FaSearchDollar,
   FaRocket,
   FaTools,
+  FaTshirt,
 } from "react-icons/fa";
 
 export const links = [
@@ -54,7 +55,15 @@ export const experiencesData = [
     "description":
       "Collaborated with clients to build scalable and responsive web applications tailored to their needs. Enhanced existing projects by fixing bugs, implementing new features, and optimizing performance. I help businesses improve their online presence and user experience. Looking to elevate your digital solutions? Let's talk!",
     "icon": React.createElement(FaUsers),
-    "date": "2023 - Present"
+    "date": "Present"
+  },
+  {
+    "title": "Co-Founder & Tech Lead",
+    "location": "Stashkart.in",
+    "description":
+      "Helping people express themselves with unique custom designed products for themselves and their loved ones.",
+    "icon": React.createElement(FaTshirt),
+    "date": "2025"
   },
   {
     "title": "Senior Technology Analyst",
