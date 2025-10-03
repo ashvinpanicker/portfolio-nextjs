@@ -13,7 +13,7 @@ import { useTheme } from "@/context/theme-context";
 import Link from "next/link"; // Import Link
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.1);
   const { theme } = useTheme();
 
   const renderDescriptionWithLink = (description: string) => {
