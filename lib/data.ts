@@ -210,6 +210,13 @@ export const projectsData = [
     externalLink: "https://aquaoutback.com",
   },
   {
+    title: "Fuja - Content Monetization",
+    description: "Fuja utilizes the bitcoin lightning network to allow users to stream money for the video streamed to them from their favorite celebrities.",
+    tags: ["Webflow", "UI/UX Design", "CMS"],
+    imageUrl: "/fuja.png",
+    externalLink: "https://fuja.webflow.io/",
+  },
+  {
     title: "Heboga",
     description: "Quick marketing website for a local confectionary business, built with React and hosted on Vercel.",
     tags: ["React", "KiloCode AI", "Godaddy"],
