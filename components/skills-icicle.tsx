@@ -57,7 +57,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("width", width)
       .attr("height", height)
-      .attr("style", `max-width: 100%; height: auto; font: ${isMobile ? 1 : 1.25}em sans-serif;`); // Increased font size for mobile
+      .attr("style", `max-width: 100%; height: auto; font: ${isMobile ? 1.25 : 1}em sans-serif;`); // Increased font size for mobile
 
     const cell = svg
       .selectAll("g")
