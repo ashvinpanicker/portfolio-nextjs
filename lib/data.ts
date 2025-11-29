@@ -163,6 +163,14 @@ export const servicesData = [
 
 export const projectsData = [
   {
+    title: "ICICI Bank Golf Benefits",
+    description:
+      "A platform for ICICI Bank customers to access exclusive golf benefits, including lessons and courses, via the Truztee platform.",
+    tags: ["Vercel", "HTML5", "CSS3", "JavaScript"],
+    imageUrl: "/icici-golf-placeholder.png",
+    externalLink: "https://icici-truztee.vercel.app/",
+  },
+  {
     title: "Hotel Tashi Delek",
     description: "A boutique hotel website with integrated emails reservations system, showcasing rooms and amenities with a focus on user experience.",
     tags: ["React", "Supabase Edge Functions", "Supabase DB"],
@@ -263,7 +271,7 @@ export const projectsData = [
   {
     title: "react-practice-calendar",
     description:
-    "My free open source solutions to the React Practice Calendar challenges by the reactpractice.dev team.",
+      "My free open source solutions to the React Practice Calendar challenges by the reactpractice.dev team.",
     tags: ["React.js", "TypeScript", "CSS"],
     imageUrl: "/react-practice-calendar.png",
     externalLink: "https://react-practice-calendar.vercel.app/",
