@@ -167,7 +167,7 @@ export const projectsData = [
     description:
       "A platform for ICICI Bank customers to access exclusive golf benefits, including lessons and courses, via the Truztee platform.",
     tags: ["Vercel", "HTML5", "CSS3", "JavaScript"],
-    imageUrl: "/icici-golf-placeholder.png",
+    imageUrl: "/ICICI.webp",
     externalLink: "https://icici-truztee.vercel.app/",
   },
   {
