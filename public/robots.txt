@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ashvinpanicker.com
+
+# Sitemaps
+Sitemap: https://ashvinpanicker.com/sitemap.xml
