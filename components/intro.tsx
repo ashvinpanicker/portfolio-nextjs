@@ -64,7 +64,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I'm <span className="font-bold">Ashvin Panicker</span> – a Senior Software Engineer focused on 
+        Hello, I'm <span className="font-bold">Ashvin Panicker</span> – a Senior Software Engineer focused on
         building <span className="underline decoration-primary underline-offset-4">high-impact, intuitive digital products</span>{" "}
         with <span className="italic">modern web technologies</span>.
       </motion.h1>
@@ -91,7 +91,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-white text-gray-900 sm:bg-gray-900 sm:text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-100 sm:hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());

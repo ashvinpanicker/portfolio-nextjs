@@ -29,8 +29,8 @@ export default function About() {
       </p>
       <p className="mb-3">
         In 2018, I <a href="https://medium.com/lastbitpay/building-a-crypto-startup-heres-how-two-indians-are-doing-it-415c8a200f86" className=" text-blue-400">co-founded a Bitcoin startup</a>, leading the development of a hardware wallet and later pivoting to a cross-platform mobile app built with React Native and a backend service built on top of Bitcoind and C-Lightning using Node.js.
-        Our work gained traction, earning recognition and funding from accelerators like Y Combinator (YC) and Berkeley SkyDeck, and eventually led to the <a href="https://bitcoinmagazine.com/technical/lastbit-launches-two-lightning-payment-apps-to-boost-adoption-in-europe" className=" text-blue-400">launch of a Bitcoin Lightning-powered debit card in Europe.</a>
-        After pivoting to a B2B model, securing crypto licenses in Estonia, and offering easy onramps and offramps via APIs to other businesses, Striga was eventually <a href="https://www.lightspark.com/news/lightspark/lightspark-acquires-striga" className="text-blue-400">acquired by Lightspark in 2025.</a>.
+        Our work gained traction, earning recognition and funding from accelerators like Y Combinator (YC) and Berkeley SkyDeck, and eventually led to the <a href="https://bitcoinmagazine.com/technical/lastbit-launches-two-lightning-payment-apps-to-boost-adoption-in-europe" className=" text-blue-400">launch of a Bitcoin Lightning-powered debit card in Europe. </a>
+        After pivoting to a B2B model, securing crypto licenses in Estonia, and offering easy onramps and offramps via APIs to other businesses, Striga (rebranded) was eventually <a href="https://www.lightspark.com/news/lightspark/lightspark-acquires-striga" className="text-blue-400">acquired by Lightspark in 2025.</a>
       </p>
       <p className="mb-3">
         By 2020, I joined <a href="https://www.superprocure.com/" className="text-blue-400">SuperProcure</a> as a Senior Software Engineer, leading the development of custom analytics dashboards, streamlining user interfaces and optimizing internal processes.
