@@ -57,7 +57,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("width", width)
       .attr("height", height)
-      .attr("style", `max-width: 100%; height: auto; font: ${isMobile ? 1.25 : 1}em sans-serif;`); // Increased font size for mobile
+      .attr("style", `max-width: 100%; height: auto; font: ${isMobile ? 1.75 : 1}em sans-serif;`); // Increased font size for mobile
 
     const cell = svg
       .selectAll("g")
@@ -86,7 +86,7 @@ const PartitionChart: React.FC<Props> = ({ data }) => {
       .style("user-select", "none")
       .attr("pointer-events", "none")
       .attr("x", 5)
-      .attr("y", 15)
+      .attr("y", isMobile ? 25 : 15)
       .attr("fill", theme === "light" ? "black" : "rgba(249, 250, 251, 0.9)") // Changed text color to black in light mode, white in dark mode
       .attr("fill-opacity", (d) => +labelVisible(d));
 
