@@ -1,18 +1,60 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { subtitles, socialLinks, paymentAddresses } from "@/lib/data";
+import toast from "react-hot-toast";
+
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
+  const [currentSubtitle, setCurrentSubtitle] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  const shuffledSubtitles = useMemo(() => {
+    // Only shuffle if mounted to prevent hydration errors between server and client
+    const subs: { text: string; link?: string }[] = [...subtitles];
+    return mounted ? shuffleArray(subs) : subs;
+  }, [mounted]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || shuffledSubtitles.length === 0) return;
+    const interval = setInterval(() => {
+      setCurrentSubtitle((prev) => (prev + 1) % shuffledSubtitles.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [shuffledSubtitles, mounted]);
+
+  const copyToClipboard = async (text: string, name: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success(`Copied ${name} address!`);
+    } catch (err) {
+      toast.error('Failed to copy');
+      console.error('Failed to copy:', err);
+    }
+  };
 
   return (
     <section
@@ -42,7 +84,7 @@ export default function Intro() {
           </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-0 right-0 text-4xl cursor-default"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -59,30 +101,46 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+      <motion.div
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl flex flex-col items-center justify-center min-h-[8rem]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I'm <span className="font-bold">Ashvin Panicker</span> – a Senior Software Engineer focused on
-        building <span className="underline decoration-primary underline-offset-4">high-impact, intuitive digital products</span>{" "}
-        with <span className="italic">modern web technologies</span>.
-      </motion.h1>
-
-      {/* <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        Hello, I'm <span className="font-bold">Ashvin Panicker </span>
-        - Senior Frontend Engineer specializing in React.
-        I create <span className="italic">seamless user experiences</span> and build scalable web applications that drive{" "}
-        <span className="underline">business success.</span>
-      </motion.h1> */}
-
+        <span>Hello, I'm <span className="font-bold">Ashvin Panicker</span>.</span>
+        <div className="mt-2 text-xl sm:text-3xl text-gray-700 dark:text-gray-300 h-10 flex items-center">
+          {mounted ? (
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentSubtitle}
+                initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
+                transition={{ duration: 0.5 }}
+                className="inline-block"
+              >
+                <span>I am </span>
+                {shuffledSubtitles[currentSubtitle]?.link ? (
+                  <a
+                    href={shuffledSubtitles[currentSubtitle].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-primary underline-offset-4 hover:text-gray-950 dark:hover:text-gray-50 transition-colors duration-300"
+                  >
+                    {shuffledSubtitles[currentSubtitle].text}
+                  </a>
+                ) : (
+                  shuffledSubtitles[currentSubtitle]?.text
+                )}
+              </motion.span>
+            </AnimatePresence>
+          ) : (
+            <span className="opacity-0">I am loading</span>
+          )}
+        </div>
+      </motion.div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mb-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -109,29 +167,40 @@ export default function Intro() {
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
+      </motion.div>
 
-        <div className="flex gap-2">
+      <motion.div
+        className="flex flex-wrap justify-center gap-2 sm:gap-3 px-4 max-w-full"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.2,
+        }}
+      >
+        {socialLinks.map((link) => (
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://linkedin.com/in/ashvin-panicker"
+            key={link.name}
+            href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Go to Ashvin's LinkedIn"
+            title={link.name}
+            className={`bg-white p-2.5 sm:p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 ${link.color} dark:hover:text-white`}
           >
-            <BsLinkedin />
+            <Image src={link.icon} alt={link.name} width={20} height={20} className="w-4 h-4 sm:w-5 sm:h-5 dark:brightness-0 dark:invert" />
           </a>
-
-          <a
-            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://github.com/ashvinpanicker"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Go to Ashvin's GitHub"
+        ))}
+        {paymentAddresses.map((payment) => (
+          <button
+            key={payment.name}
+            onClick={() => copyToClipboard(payment.address, payment.name)}
+            title={`Copy ${payment.name} Address`}
+            className={`bg-white p-2.5 sm:p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 ${payment.color} dark:hover:text-white`}
           >
-            <FaGithubSquare />
-          </a>
-        </div>
+            <Image src={payment.icon} alt={payment.name} width={20} height={20} className="w-4 h-4 sm:w-5 sm:h-5 object-contain dark:brightness-0 dark:invert" />
+          </button>
+        ))}
       </motion.div>
     </section>
   );
 }
+
