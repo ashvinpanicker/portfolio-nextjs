@@ -27,13 +27,21 @@ export default function ServiceCard({
   return (
     <motion.div
       variants={fadeInAnimationVariants}
-      className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden p-5 hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 flex flex-col items-center text-center"
+      className="group relative bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-2xl p-6 hover:shadow-xl hover:dark:bg-white/10 transition-all duration-300 flex flex-col text-left overflow-hidden"
     >
-      <div className="mb-4">
-        <Icon className="text-5xl text-gray-700 dark:text-white/70" />
+      {/* Subtle glow effect on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-colors duration-500 -z-10" />
+
+      {/* Icon Container */}
+      <div className="mb-6 w-14 h-14 rounded-xl bg-gray-50 dark:bg-white/10 flex items-center justify-center border border-black/5 dark:border-white/5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+        <Icon className="text-2xl text-gray-700 dark:text-white/80" />
       </div>
-      <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-      <p className="leading-relaxed text-gray-700 dark:text-white/70">
+      
+      {/* Text Content */}
+      <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white/90 leading-tight">
+        {title}
+      </h3>
+      <p className="leading-relaxed text-sm text-gray-600 dark:text-white/60">
         {description}
       </p>
     </motion.div>

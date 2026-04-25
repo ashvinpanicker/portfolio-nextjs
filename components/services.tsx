@@ -20,7 +20,7 @@ export default function Services() {
   const { ref } = useSectionInView("Services", 0.8);
 
   return (
-    <section ref={ref} id="services" className="scroll-mt-28 mb-28">
+    <section ref={ref} id="services" className="scroll-mt-28 mb-28 max-w-[53rem]">
       <SectionHeading>Services</SectionHeading>
       <motion.div
         variants={containerVariants}
