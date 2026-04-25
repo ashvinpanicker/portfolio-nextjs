@@ -5,7 +5,6 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { subtitles, socialLinks } from "@/lib/data";
@@ -124,7 +123,7 @@ export default function Intro() {
                     href={shuffledSubtitles[currentSubtitle].link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 dark:text-blue-400 underline decoration-dotted decoration-blue-500/50 dark:decoration-blue-400/50 underline-offset-4 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
+                    className="text-link"
                   >
                     {shuffledSubtitles[currentSubtitle].text}
                   </a>
@@ -137,10 +136,13 @@ export default function Intro() {
             <span className="opacity-0">I am loading</span>
           )}
         </div>
+        <div className="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-[40rem] text-center font-normal leading-relaxed">
+          I co-founded a Bitcoin startup that got acquired by Lightspark. Now I help businesses build things that actually ship.
+        </div>
       </motion.div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mb-6"
+        className="flex flex-col sm:flex-row items-center justify-center gap-6 px-4 text-lg font-medium mb-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -149,24 +151,15 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-white text-gray-900 sm:bg-gray-900 sm:text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-100 sm:hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-8 py-3.5 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition shadow-lg dark:bg-gray-50 dark:text-gray-950"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Let's talk{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Ashvin_Panicker_Resume.pdf"
-          download
-        >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
       </motion.div>
 
       <motion.div
@@ -177,16 +170,19 @@ export default function Intro() {
           delay: 0.2,
         }}
       >
+
+
         {socialLinks.map((link) => (
           <a
             key={link.name}
             href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={link.name === "CV" ? undefined : "_blank"}
+            rel={link.name === "CV" ? undefined : "noopener noreferrer"}
+            download={link.name === "CV" ? true : undefined}
             title={link.name}
-            className={`bg-white p-2.5 sm:p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 ${link.color} dark:hover:text-white`}
+            className={`bg-white w-12 h-12 flex items-center justify-center text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 text-gray-700 dark:text-white/60 ${link.color} dark:hover:text-white`}
           >
-            <Image src={link.icon} alt={link.name} width={20} height={20} className="w-4 h-4 sm:w-5 sm:h-5 dark:brightness-0 dark:invert" />
+            <Image src={link.icon} alt={link.name} width={20} height={20} className="w-5 h-5 dark:brightness-0 dark:invert" />
           </a>
         ))}
       </motion.div>

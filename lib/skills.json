@@ -61,6 +61,7 @@
             "name": "Databases",
             "color": "hsl(251, 70%, 50%)",
             "children": [
+              { "name": "MySQL", "color": "hsl(180, 70%, 50%)", "value": 85 },
               { "name": "MongoDB", "color": "hsl(251, 70%, 50%)", "value": 72 },
               { "name": "PostgreSQL", "color": "hsl(24, 70%, 50%)", "value": 70 }
             ]
@@ -121,6 +122,7 @@
             "name": "Design Tools",
             "color": "hsl(193, 70%, 50%)",
             "children": [
+              { "name": "UI/UX", "color": "hsl(280, 70%, 50%)", "value": 95 },
               { "name": "Figma", "color": "hsl(193, 70%, 50%)", "value": 95 },
               { "name": "Adobe XD", "color": "hsl(93, 70%, 50%)", "value": 90 }
             ]
@@ -142,6 +144,7 @@
           { "name": "Jquery", "color": "hsl(313, 70%, 50%)", "value": 50 },
           { "name": "Wordpress", "color": "hsl(168, 70%, 50%)", "value": 55 },
           { "name": "Webflow", "color": "hsl(25, 70%, 50%)", "value": 60 },
+          { "name": "SEO", "color": "hsl(140, 70%, 50%)", "value": 85 },
           { "name": "GIMP", "color": "hsl(50, 70%, 50%)", "value": 58 },
           { "name": "ImageMagick", "color": "hsl(250, 70%, 50%)", "value": 52 },
           { "name": "Entrepreneurship", "color": "hsl(290, 70%, 50%)", "value": 65 },

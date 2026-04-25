@@ -31,11 +31,14 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <a 
+        href={externalLink} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="block bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 cursor-pointer"
+      >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <a href={externalLink} target="_blank" rel="noopener noreferrer">
-            <h3 className="text-2xl font-semibold">{title}</h3>
-          </a>
+            <h3 className="text-2xl font-semibold group-hover:text-blue-500 transition-colors">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
@@ -51,13 +54,13 @@ export default function Project({
           </ul>
         </div>
 
-        <a target="_blank" href={externalLink} rel="noopener noreferrer" aria-label={`View ${title}`}>
+
           <Image
             src={imageUrl}
             alt="Project I worked on"
             quality={95}
-            width={256}
-            height={256}
+            width={1200}
+            height={800}
             className="
                 absolute hidden sm:block top-8 -right-40 w-full max-w-[28.25rem] rounded-t-lg shadow-2xl
                 transition 
@@ -73,8 +76,7 @@ export default function Project({
                 group-even:right-[initial] group-even:-left-40
             "
           />
-        </a>
-      </section>
+      </a>
     </motion.div>
   );
 }
