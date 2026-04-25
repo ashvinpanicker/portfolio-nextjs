@@ -8,7 +8,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { subtitles, socialLinks, paymentAddresses } from "@/lib/data";
+import { subtitles, socialLinks } from "@/lib/data";
 import toast from "react-hot-toast";
 
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -124,7 +124,7 @@ export default function Intro() {
                     href={shuffledSubtitles[currentSubtitle].link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline decoration-primary underline-offset-4 hover:text-gray-950 dark:hover:text-gray-50 transition-colors duration-300"
+                    className="text-blue-500 dark:text-blue-400 underline decoration-dotted decoration-blue-500/50 dark:decoration-blue-400/50 underline-offset-4 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300"
                   >
                     {shuffledSubtitles[currentSubtitle].text}
                   </a>
@@ -170,7 +170,7 @@ export default function Intro() {
       </motion.div>
 
       <motion.div
-        className="flex flex-wrap justify-center gap-2 sm:gap-3 px-4 max-w-full"
+        className="flex flex-wrap justify-center gap-2 sm:gap-3 px-4 w-full"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -188,16 +188,6 @@ export default function Intro() {
           >
             <Image src={link.icon} alt={link.name} width={20} height={20} className="w-4 h-4 sm:w-5 sm:h-5 dark:brightness-0 dark:invert" />
           </a>
-        ))}
-        {paymentAddresses.map((payment) => (
-          <button
-            key={payment.name}
-            onClick={() => copyToClipboard(payment.address, payment.name)}
-            title={`Copy ${payment.name} Address`}
-            className={`bg-white p-2.5 sm:p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 ${payment.color} dark:hover:text-white`}
-          >
-            <Image src={payment.icon} alt={payment.name} width={20} height={20} className="w-4 h-4 sm:w-5 sm:h-5 object-contain dark:brightness-0 dark:invert" />
-          </button>
         ))}
       </motion.div>
     </section>
