@@ -15,21 +15,21 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[3.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[50rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="fixed top-0 left-1/2 h-[3.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] lg:top-6 lg:h-[3.25rem] lg:w-[50rem] lg:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-0 left-1/2 h-[3.5rem] w-full -translate-x-1/2 sm:top-[1.7rem] sm:h-[initial] sm:w-[50rem] sm:py-0 justify-between sm:justify-center px-6 sm:px-0 items-center">
+      <nav className="flex fixed top-0 left-1/2 h-[3.5rem] w-full -translate-x-1/2 lg:top-[1.7rem] lg:h-[initial] lg:w-[50rem] lg:py-0 justify-between lg:justify-center px-6 lg:px-0 items-center">
         
         {/* Mobile Logo / Text */}
-        <div className="sm:hidden flex items-center h-full text-gray-900 dark:text-gray-100 font-bold text-lg tracking-tight">
+        <div className="lg:hidden flex items-center h-full text-gray-900 dark:text-gray-100 font-bold text-lg tracking-tight">
           Ashvin.
         </div>
 
         {/* Mobile Hamburger Button */}
         <button 
-          className="sm:hidden flex items-center justify-center h-full text-gray-600 dark:text-gray-300 p-2 -mr-2"
+          className="lg:hidden flex items-center justify-center h-full text-gray-600 dark:text-gray-300 p-2 -mr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -37,7 +37,7 @@ export default function Header() {
         </button>
 
         {/* Desktop Navigation */}
-        <ul className="hidden sm:flex w-[initial] flex-nowrap items-center justify-center gap-5 text-[0.9rem] font-medium text-gray-500">
+        <ul className="hidden lg:flex w-[initial] flex-nowrap items-center justify-center gap-5 text-[0.9rem] font-medium text-gray-500">
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
@@ -81,7 +81,7 @@ export default function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed top-[3.5rem] left-0 w-full bg-white dark:bg-gray-950 shadow-xl border-b border-black/10 dark:border-white/10 sm:hidden flex flex-col"
+            className="fixed top-[3.5rem] left-0 w-full bg-white dark:bg-gray-950 shadow-xl border-b border-black/10 dark:border-white/10 lg:hidden flex flex-col"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
