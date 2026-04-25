@@ -37,6 +37,28 @@ export default function Project({
         rel="noopener noreferrer" 
         className="block bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 cursor-pointer"
       >
+          <Image
+            src={imageUrl}
+            alt="Project I worked on"
+            quality={95}
+            width={1200}
+            height={800}
+            className="
+                block sm:absolute sm:top-8 sm:-right-40 w-full sm:w-[28.25rem] rounded-t-lg shadow-2xl
+                transition 
+                group-hover:scale-[1.04]
+                group-hover:-translate-x-3
+                group-hover:translate-y-3
+                group-hover:-rotate-2
+
+                group-even:group-hover:translate-x-3
+                group-even:group-hover:translate-y-3
+                group-even:group-hover:rotate-2
+
+                group-even:right-[initial] group-even:-left-40
+            "
+          />
+
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
             <h3 className="text-2xl font-semibold group-hover:text-blue-500 transition-colors">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
@@ -53,29 +75,6 @@ export default function Project({
             ))}
           </ul>
         </div>
-
-
-          <Image
-            src={imageUrl}
-            alt="Project I worked on"
-            quality={95}
-            width={1200}
-            height={800}
-            className="
-                absolute hidden sm:block top-8 -right-40 w-full max-w-[28.25rem] rounded-t-lg shadow-2xl
-                transition 
-                group-hover:scale-[1.04]
-                group-hover:-translate-x-3
-                group-hover:translate-y-3
-                group-hover:-rotate-2
-
-                group-even:group-hover:translate-x-3
-                group-even:group-hover:translate-y-3
-                group-even:group-hover:rotate-2
-
-                group-even:right-[initial] group-even:-left-40
-            "
-          />
       </a>
     </motion.div>
   );
