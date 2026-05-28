@@ -133,7 +133,7 @@ export default function Intro() {
               </motion.span>
             </AnimatePresence>
           ) : (
-            <span className="opacity-0">I am loading</span>
+            <span className="opacity-0"> </span>
           )}
         </div>
         <div className="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-[40rem] text-center font-normal leading-relaxed">

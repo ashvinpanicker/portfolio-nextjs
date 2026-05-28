@@ -54,29 +54,21 @@ export const links = [
 
 export const experiencesData = [
   {
-    "title": "Freelance Application Developer",
-    "location": "Remote",
+    "title": "Founder & Software Consultant",
+    "location": "Tailgrab Digital",
     "description":
-      "Collaborated with clients to build scalable and responsive web applications tailored to their needs. Enhanced existing projects by fixing bugs, implementing new features, and optimizing performance. I help businesses improve their online presence and user experience. Looking to elevate your digital solutions? Let's talk!",
+      "Running a software consultancy helping SMEs and startups build fast, reliable web and mobile products. From fintech platforms and hotel booking systems to SEO-optimised marketing sites — I help businesses ship things that work. Let's talk!",
     "icon": React.createElement(FaUsers),
-    "date": "Present"
+    "date": "2023 - Present"
   },
 
   {
     "title": "Senior Technology Analyst",
     "location": "Oaknorth Bank",
     "description":
-      "Debt Finance Directors needed faster, more reliable internal tools for processing loans. Developed scalable, reusable React form components that significantly improved application usability and reduced data entry errors.",
+      "Debt Finance Directors needed faster, more reliable internal tools for processing loans. I developed scalable, reusable React form components that significantly improved application usability and reduced data entry errors.",
     "icon": React.createElement(FaPiggyBank),
     "date": "2024"
-  },
-  {
-    "title": "Founder",
-    "location": "Tailgrab Digital",
-    "description":
-      "Launched a dropshipping business to test scalable e-commerce strategies with low overhead. Ran targeted ad campaigns and optimized pricing, successfully selling out all handpicked inventory",
-    "icon": React.createElement(CgWorkAlt),
-    "date": "2023 - 2024"
   },
   {
     "title": "Senior Software Engineer",
