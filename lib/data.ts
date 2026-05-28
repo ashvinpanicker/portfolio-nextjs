@@ -162,7 +162,7 @@ export const projectsData = [
   {
     title: "lastbit",
     description:
-      "Spend your Bitcoin instantly anywhere in Europe with the lastbit debit card powered MasterCard.",
+      "Spend your Bitcoin instantly anywhere in Europe with the lastbit debit card powered by MasterCard.",
     tags: ["Bitcoin", "React-Native", "Entrepreneurship", "ReactJS", "Gatsby", "CSS"],
     imageUrl: "/bitcoin-zeus.gif",
     externalLink: "https://lastbit-website-static.onrender.com",
