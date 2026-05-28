@@ -514,7 +514,7 @@ export const subtitles = [
 
 export const socialLinks = [
   // { name: "Portfolio", url: "https://ashvinpanicker.vercel.app/", icon: "/icons/portfolio.svg", color: "hover:text-slate-700" },
-  { name: "CV", url: "/Ashvin_Panicker_Resume.pdf", icon: "/icons/cv.svg", color: "hover:text-gray-900 dark:hover:text-gray-100" },
+  // { name: "CV", url: "/Ashvin_Panicker_Resume.pdf", icon: "/icons/cv.svg", color: "hover:text-gray-900 dark:hover:text-gray-100" },
   { name: "GitHub", url: "https://github.com/ashvinpanicker", icon: "/icons/github.svg", color: "hover:text-[#181717]" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/ashvin-panicker/", icon: "/icons/linkedin.svg", color: "hover:text-[#0A66C2]" },
   // { name: "LeetCode", url: "https://leetcode.com/u/ashvinpanicker/", icon: "/icons/leetcode.svg", color: "hover:text-[#FFA116]" },
