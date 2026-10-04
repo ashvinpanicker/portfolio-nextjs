@@ -416,6 +416,18 @@ export const skillsData = [
   "Java",
   "C++",
 
+  // ChatGPT summary of my top worth skills
+  // React
+  // TypeScript
+  // Frontend Architecture
+  // UI Systems
+  // Product Thinking
+  // Startups
+  // Rapid Shipping
+  // AI-Assisted Development
+  // Next.js
+  // Full stack JS
+
   // What skills could you possibly have as a human on planet earth?
   // research
   // strategic thinking
