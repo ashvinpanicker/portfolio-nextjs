@@ -154,7 +154,7 @@ export const projectsData = [
   {
     title: "TripSplit",
     description:
-      "A free, open-source Splitwise alternative for group trips. Unlimited expenses, smart settle-up in the fewest payments, itemized bills, one-tap UPI and offline mode. Vibecoded with Claude.",
+      "A free, open-source Splitwise alternative for group trips. Unlimited expenses, smart settle-up in the fewest payments, itemized bills, one-tap UPI and offline mode.",
     tags: ["Next.js", "Supabase", "Cloudflare Workers", "TypeScript", "PWA"],
     imageUrl: "/tripsplit-ss.png",
     externalLink: "https://gotripsplit.app",
