@@ -42,5 +42,6 @@
   "devDependencies": {
     "@types/d3": "^7.4.3",
     "@types/react-vertical-timeline-component": "^3.3.6"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
