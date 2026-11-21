@@ -10,6 +10,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { subtitles, socialLinks } from "@/lib/data";
 import toast from "react-hot-toast";
+import Fretboard from "./fretboard";
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   const newArray = [...array];
@@ -106,7 +107,14 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span>Hello, I'm <span className="font-bold">Ashvin Panicker</span>.</span>
+        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-700 dark:text-emerald-300">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+          </span>
+          Available for new projects
+        </span>
+        <span className="font-display text-5xl sm:text-7xl !leading-[1.05]">Ashvin Panicker</span>
         <div className="mt-2 text-xl sm:text-3xl text-gray-700 dark:text-gray-300 h-10 flex items-center">
           {mounted ? (
             <AnimatePresence mode="wait">
@@ -158,7 +166,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact Me
+          Start a project
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -194,6 +202,15 @@ export default function Intro() {
             <Image src={link.icon} alt={link.name} width={20} height={20} className="w-5 h-5 dark:brightness-0 dark:invert" />
           </a>
         ))}
+      </motion.div>
+
+      <motion.div
+        className="mt-14 px-4"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35 }}
+      >
+        <Fretboard />
       </motion.div>
     </section>
   );

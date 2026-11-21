@@ -18,38 +18,12 @@ import {
 } from "react-icons/fa";
 
 export const links = [
-  {
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Services",
-    hash: "#services",
-  },
-  {
-    name: "Testimonials",
-    hash: "#testimonials",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+  { name: "Home", hash: "/#home" },
+  { name: "About", hash: "/#about" },
+  { name: "Work", hash: "/#projects" },
+  { name: "Life", hash: "/#life" },
+  { name: "Services", hash: "/#services" },
+  { name: "Contact", hash: "/#contact" },
 ] as const;
 
 export const experiencesData = [

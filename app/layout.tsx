@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
@@ -17,8 +17,16 @@ const inter = Inter({
   adjustFontFallback: false,
 });
 
+const display = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-display",
+  adjustFontFallback: false,
+});
+
 export const metadata = {
-  title: 'Ashvin Panicker | UX-Focused Full-Stack Web & App Developer',
+  title: 'Ashvin Panicker | Web & App Developer',
   description:
     'Frontend focused full-stack engineer with 8+ years experience in designing and building apps. I help startups and businesses build fast, beautiful, and user-friendly products across web and mobile.',
   manifest: '/manifest.json',
@@ -96,10 +104,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 overflow-x-hidden`}
+        className={`${inter.className} ${display.variable} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 overflow-x-hidden`}
       >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[-25rem] h-[31.25rem] w-[60rem] rounded-full blur-[10rem] sm:w-[68.75rem] sm:right-[11rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-25rem] h-[50rem] w-[60rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394] sm:h-[31.25rem]"></div>
+        <div className="bg-dots pointer-events-none absolute inset-0 -z-20" />
+        <div className="pointer-events-none absolute top-[-10rem] left-1/2 -z-10 h-[36rem] w-[60rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-sky-200 via-amber-100 to-rose-200 opacity-60 blur-[8rem] dark:from-sky-900 dark:via-indigo-950 dark:to-rose-950 dark:opacity-50" />
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

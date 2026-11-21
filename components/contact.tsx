@@ -6,10 +6,14 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import clsx from "clsx";
+
+const TOPICS = ["New project", "Collab", "Travel tips", "Just saying hi"] as const;
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.8);
   const [isPending, setIsPending] = useState(false);
+  const [topic, setTopic] = useState<(typeof TOPICS)[number]>("New project");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,7 +36,7 @@ export default function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ senderEmail, message }),
+        body: JSON.stringify({ senderEmail, message, topic }),
       });
 
       const responseData = await response.json();
@@ -69,14 +73,32 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading kicker="Say hello">Let&apos;s talk</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Let’s chat! Drop your message here and I’ll get back to you shortly.
+        Pick a topic and drop a note. I’ll get back to you soon.
       </p>
 
+      <div className="mt-6 flex flex-wrap justify-center gap-2">
+        {TOPICS.map((t) => (
+          <button
+            key={t}
+            type="button"
+            onClick={() => setTopic(t)}
+            className={clsx(
+              "rounded-full border px-4 py-1.5 text-sm transition",
+              t === topic
+                ? "border-gray-900 bg-gray-900 text-white dark:border-white dark:bg-white dark:text-gray-900"
+                : "border-black/10 hover:border-black/30 dark:border-white/15 dark:hover:border-white/40"
+            )}
+          >
+            {t}
+          </button>
+        ))}
+      </div>
+
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-6 flex flex-col dark:text-black"
         onSubmit={handleSubmit}
       >
         <input

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -11,6 +12,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const onHome = usePathname() === "/";
 
   return (
     <header className="z-[999] relative">
@@ -23,9 +25,9 @@ export default function Header() {
       <nav className="flex fixed top-0 left-1/2 h-[3.5rem] w-full -translate-x-1/2 lg:top-[1.7rem] lg:h-[initial] lg:w-[50rem] lg:py-0 justify-between lg:justify-center px-6 lg:px-0 items-center">
         
         {/* Mobile Logo / Text */}
-        <div className="lg:hidden flex items-center h-full text-gray-900 dark:text-gray-100 font-bold text-lg tracking-tight">
+        <Link href="/" className="lg:hidden flex items-center h-full text-gray-900 dark:text-gray-100 font-bold text-lg tracking-tight">
           Ashvin.
-        </div>
+        </Link>
 
         {/* Mobile Hamburger Button */}
         <button 
@@ -49,7 +51,7 @@ export default function Header() {
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
-                    "text-gray-950 dark:text-gray-200": activeSection === link.name,
+                    "text-gray-950 dark:text-gray-200": onHome && activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -60,7 +62,7 @@ export default function Header() {
               >
                 {link.name}
 
-                {link.name === activeSection && (
+                {onHome && link.name === activeSection && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
@@ -94,7 +96,7 @@ export default function Header() {
                     className={clsx(
                       "flex w-full items-center justify-center py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition",
                       {
-                        "text-gray-950 dark:text-gray-200 bg-gray-50 dark:bg-gray-800/50": activeSection === link.name,
+                        "text-gray-950 dark:text-gray-200 bg-gray-50 dark:bg-gray-800/50": onHome && activeSection === link.name,
                       }
                     )}
                     href={link.hash}
