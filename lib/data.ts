@@ -152,6 +152,14 @@ export const servicesData = [
 
 export const projectsData = [
   {
+    title: "TripSplit",
+    description:
+      "A free, open-source Splitwise alternative for group trips. Unlimited expenses, smart settle-up in the fewest payments, itemized bills, pay links for UPI, PayPal and crypto, and offline mode.",
+    tags: ["Next.js", "Supabase", "Cloudflare Workers", "TypeScript", "PWA"],
+    imageUrl: "/tripsplit-ss.png",
+    externalLink: "https://gotripsplit.app",
+  },
+  {
     title: "Stashkart",
     description:
       "An e-commerce platform for a local business, featuring a custom-built shopify theme with integrated payment gateways and inventory management.",
