@@ -38,7 +38,7 @@ export default function Contact() {
       const responseData = await response.json();
 
       if (!response.ok) {
-        toast.error(responseData.message || "Failed to send email.");
+        toast.error(responseData.error || "Failed to send email.");
       } else {
         toast.success("Email sent successfully!");
         (e.target as HTMLFormElement).reset();

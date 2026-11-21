@@ -7,8 +7,6 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from "next/script";
 
 const inter = Inter({
@@ -35,7 +33,7 @@ export const metadata = {
     siteName: 'Ashvin Panicker',
     images: [
       {
-        url: 'https://ashvinpanicker.com/api/og',
+        url: 'https://ashvinpanicker.com/og.png',
         width: 1200,
         height: 630,
       },
@@ -49,7 +47,7 @@ export const metadata = {
     description:
       'Frontend-first full-stack developer with expertise in React, Next.js, and UI/UX. Helping startups build high-quality web and mobile apps that users love.',
     images: [{
-      url: 'https://ashvinpanicker.com/api/og',
+      url: 'https://ashvinpanicker.com/og.png',
       width: 1200,
       height: 630,
     }],
@@ -78,7 +76,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Ashvin Panicker",
               url: "https://ashvinpanicker.com",
-              image: "https://ashvinpanicker.com/api/og",
+              image: "https://ashvinpanicker.com/og.png",
               jobTitle: "Full-Stack Web Developer",
               worksFor: {
                 "@type": "Organization",
@@ -112,11 +110,8 @@ export default function RootLayout({
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
 
-        {/* Vercel Analytics */}
-        <Analytics />
-        <SpeedInsights />
-
-        {/* Google Analytics */}
+        {/* Google Analytics (only when an ID is configured) */}
+        {GA_MEASUREMENT_ID && (<>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -129,6 +124,7 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        </>)}
       </body>
     </html>
   );
