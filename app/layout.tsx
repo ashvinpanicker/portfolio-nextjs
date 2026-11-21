@@ -110,7 +110,8 @@ export default function RootLayout({
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
 
-        {/* Google Analytics */}
+        {/* Google Analytics (only when an ID is configured) */}
+        {GA_MEASUREMENT_ID && (<>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -123,6 +124,7 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        </>)}
       </body>
     </html>
   );
