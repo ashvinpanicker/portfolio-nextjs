@@ -1,0 +1,10 @@
+# Cloudflare Pages: build `npm run build`, output `out`. Functions live in /functions.
+name = "ashvinpanicker"
+pages_build_output_dir = "out"
+compatibility_date = "2026-11-01"
+
+# Secrets (Pages dashboard → Settings → Variables, or `wrangler pages secret put NAME`):
+#   ANTHROPIC_API_KEY  powers /api/ask (Ask my AI)
+#   RESEND_API_KEY     powers /api/contact
+#   CONTACT_TO         inbox that receives contact-form messages
+#   CONTACT_FROM       optional verified sender, e.g. "Ashvin <hello@ashvinpanicker.com>"
