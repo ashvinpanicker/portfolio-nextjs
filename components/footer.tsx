@@ -8,7 +8,7 @@ export default function Footer() {
       </small>
       <p className="text-xs">
         <span className="font-semibold">About this website:</span> built with
-        Next.js, TypeScript, Tailwind CSS, Framer Motion, Vercel hosting.
+        Next.js, TypeScript, Tailwind CSS, Framer Motion, Cloudflare hosting.
       </p>
     </footer>
   );
