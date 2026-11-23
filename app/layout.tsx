@@ -59,7 +59,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  // Public measurement ID (it ships in the page anyway); the env var can override it
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-2BSJZD2C80';
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
